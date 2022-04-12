@@ -1,0 +1,2 @@
+# Aprendizados da semana
+Nessa primeira semana de estudos na Labenu, aprendi o que é Terminal e como utilizar **alguns comandos**, como o mkdir para criar pastas, o cd para entrar nelas e o touch para criar arquivos dentro dessas pastas. 
