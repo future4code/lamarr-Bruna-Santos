@@ -45,16 +45,3 @@ let segundoNumero = prompt("Digite um número aleatório")
 
 console.log(`O primeiro número somando ao segundo numero resulta em ${Number(primeiroNumero) + Number(segundoNumero)}`)
 console.log(`O primeiro número multiplicado pelo segundo numero resulta em ${Number(primeiroNumero) * Number(segundoNumero)}`)
-
-
-
-
-
-
-
-
-
-
-
-
-
