@@ -30,9 +30,6 @@ console.log("Você gosta de calor?", pergunta3)
 let a = 10
 let b = 25
 let c = 0
-c = a
-a = b
-b = c
 
 // Resultado final:
 console.log("O novo valor de a é", a) 
@@ -42,6 +39,3 @@ console.log("O novo valor de b é", b)
 
 let primeiroNumero = prompt("Digite um número aleatório")
 let segundoNumero = prompt("Digite um número aleatório")
-
-console.log(`O primeiro número somando ao segundo numero resulta em ${Number(primeiroNumero) + Number(segundoNumero)}`)
-console.log(`O primeiro número multiplicado pelo segundo numero resulta em ${Number(primeiroNumero) * Number(segundoNumero)}`)
