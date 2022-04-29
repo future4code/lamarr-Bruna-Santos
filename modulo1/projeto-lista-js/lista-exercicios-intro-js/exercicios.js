@@ -5,8 +5,6 @@ function soma(num1, num2) {
   // implemente sua lógica aqui
   return num1 + num2
 }
-console.log(1 + 2)
-console.log(4 + 5)
 
 // EXERCÍCIO 0B
 function imprimeMensagem() {
@@ -19,12 +17,11 @@ function imprimeMensagem() {
 // EXERCÍCIOS PARA FAZER ------------------------------------------------------------------
 
 // EXERCÍCIO 01
-
 function calculaAreaRetangulo() {
-let altura=prompt("Insira um valor para altura")
-let largura=prompt("Insira um valor para largura")
+  let altura=prompt("Insira um valor para altura")
+  let largura=prompt("Insira um valor para largura")
 
-console.log(altura*largura)
+  console.log(altura*largura)
 }
 
 // EXERCÍCIO 02
@@ -36,8 +33,7 @@ function imprimeIdade() {
 
 // EXERCÍCIO 03
 function calculaIMC(peso, altura) {
-  return peso/(altura*altura)
-
+  return peso/(altura*altura)  
 }
 
 // EXERCÍCIO 04
@@ -46,9 +42,6 @@ function imprimeInformacoesUsuario() {
   let idade=prompt("Qual sua idade?")
   let email=prompt("Qual seu e-mail?")
   console.log(`Meu nome é ${nome}, tenho ${idade} anos, e o meu email é ${email}.`)
-  
-  // "Meu nome é NOME, tenho IDADE anos, e o meu email é EMAIL."
-
 }
 
 // EXERCÍCIO 05
@@ -58,8 +51,6 @@ function imprimeTresCoresFavoritas() {
   let terceiraCor=prompt("Insira sua ultima cor favorita")
   let arrayCor=[primeiraCor, segundaCor, terceiraCor]
   console.log(arrayCor)
-
-
 }
 
 // EXERCÍCIO 06
@@ -109,7 +100,6 @@ function trocaPrimeiroEUltimo(array) {
 // EXERCÍCIO 12
 function checaIgualdadeDesconsiderandoCase(string1, string2) {
   return string1.toUpperCase()===string2.toUpperCase()
-
 }
 
 // EXERCÍCIO 13
@@ -156,12 +146,11 @@ function checaAnoBissexto(ano) {
 
 // EXERCÍCIO 15
 function checaValidadeInscricaoLabenu() {
-let idadeLabenu =prompt("Você tem mais de 18 anos?")
-let ensinoMedio =prompt("Você possui ensino médio completo?")
-let disponibilidade =prompt("Você possui disponibilidade exclusiva durante os horarios do curso?")
-if( (idadeLabenu === "sim") && (ensinoMedio === "sim") && (disponibilidade === "sim")){
-  console.log(true)
-} else {
-  console.log(false)
-}
-}
+  let idadeLabenu =prompt("Você tem mais de 18 anos?")
+  let ensinoMedio =prompt("Você possui ensino médio completo?")
+  let disponibilidade =prompt("Você possui disponibilidade exclusiva durante os horarios do curso?")
+  if( (idadeLabenu === "sim") && (ensinoMedio === "sim") && (disponibilidade === "sim")){
+    console.log(true)
+  } else {
+    console.log(false)
+  }
