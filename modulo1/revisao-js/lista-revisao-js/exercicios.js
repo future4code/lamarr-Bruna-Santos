@@ -11,8 +11,18 @@ function retornaTamanhoArray(array) {
 
 // EXERCÍCIO 02
 function retornaArrayInvertido(array) {
-  return array.reverse()
-}
+ return array.reverse()
+} 
+/*  // DESAFIO:
+ function retornaArrayInvertido(array) {
+  let resultado = []
+  while(array.length > 0){
+    let ultimoArray = array.pop()
+    resultado.push(ultimoArray)
+    }
+    return (resultado) 
+} */
+
 
 // EXERCÍCIO 03
 function retornaArrayOrdenado(array) {
@@ -25,9 +35,20 @@ function retornaArrayOrdenado(array) {
 
 // EXERCÍCIO 04
 function retornaNumerosPares(array) {
-  return array.filter((par) => par % 2 === 0)
+return array.filter((par) => par % 2 === 0)
 
-}
+}   
+/* DESAFIO:
+function retornaNumerosPares(array) {
+  let resultado = []
+  for (let numero of array){
+    if (numero % 2 === 0){
+      resultado.push(numero)
+    }
+  }
+  return(resultado)
+}  */
+
 
 // EXERCÍCIO 05
 function retornaNumerosParesElevadosADois(array) {
@@ -137,12 +158,12 @@ function retornaPessoasNaoAutorizadas(pessoas) {
 // EXERCÍCIO 14
 function retornaContasComSaldoAtualizado(contas) {
   for(let conta of contas){
-     while (conta.compras.length > 0){
+      while (conta.compras.length > 0){
       let ultimaCompra = conta.compras.pop()
       conta.saldoTotal = conta.saldoTotal - ultimaCompra
     }
    } 
-   return(contas) 
+   return(contas)
  }
 
 
