@@ -67,6 +67,13 @@ function retornaObjetoEntreDoisNumeros(num1, num2) {
 
 // EXERCÍCIO 08
 function retornaNPrimeirosPares(n) {
+  let array = []
+  let numeros = 0
+  while (array.length < n){
+    array.push(numeros)
+    numeros += 2
+  }
+  return array
 }
 
 // EXERCÍCIO 09
@@ -83,8 +90,14 @@ function classificaTriangulo(ladoA, ladoB, ladoC) {
 
 // EXERCÍCIO 10
 function retornaSegundoMaiorESegundoMenor(array) {
+  array.sort(function comparar (a,b){
+    return a-b    
+  })  
 
-
+  let segundoMenor = array[1]
+  let segundoMaior = array[array.length-2]
+  return [segundoMaior, segundoMenor]
+ 
 }
 
 // EXERCÍCIO 11
@@ -123,15 +136,26 @@ function retornaPessoasNaoAutorizadas(pessoas) {
 
 // EXERCÍCIO 14
 function retornaContasComSaldoAtualizado(contas) {
-}
+  for(let conta of contas){
+     while (conta.compras.length > 0){
+      let ultimaCompra = conta.compras.pop()
+      conta.saldoTotal = conta.saldoTotal - ultimaCompra
+    }
+   } 
+   return(contas) 
+ }
 
 
 // EXERCÍCIO 15A
 function retornaArrayOrdenadoAlfabeticamente(consultas) {
- 
+    consultas.sort(function (a,b){
+      return a.nome < b.nome ? -1 : a.nome > b.nome ? 1 : 0
+      }) 
+      return(consultas)
 }
 
 // EXERCÍCIO 15B
 function retornaArrayOrdenadoPorData(consultas) {
-   
+
 }
+
