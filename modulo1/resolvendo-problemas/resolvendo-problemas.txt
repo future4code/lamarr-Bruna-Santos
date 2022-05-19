@@ -1,0 +1,8 @@
+Primeiro passo: Leia atentamente o enunciado para conseguir entender o que é solicitado.
+Segundo passo: Retire as palavras chaves que você identificou como importante no enunciado.
+Terceiro passo: Pense como deve ser a saída desse problema, para começar a identificar possiveis métodos de entradas.
+Quarto passo: Crie exemplos de como essa situação poderia ser resolvida sem ser com códigos, um bom exemplo são os diagramas.
+Quinto passo: Comece o seu código, não precisa tentar fazer o melhor código possível de primeira, aqui vai ser o seu resumo,
+faça alguma parte e imprima para ver o que está saindo para saber se está indo no caminho certo e assim por diante, se preocupe apenas em entender o que está fazendo.
+Sexto passo: Comece a testar o seu código.
+Sétimo passo: Deixe seu código bonitinho, verifique se usou o camelCase corretamente, coloque o melhor nome possível para suas variáveis e funções, coloque a identação corretamente.
