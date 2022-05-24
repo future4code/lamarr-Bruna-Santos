@@ -5,44 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Adicionar Produto</title>
+    <link href="style.css" rel="stylesheet">
+
 </head>
 <body>
-    <header>
-        <p>Plus Ultra Store</p>
-    </header>
-    
-    <nav>
-        <a href="file:///C:/Users/Kenzie-PC/Desktop/lamarr-Bruna-Santos/modulo2/html-sistema-loja/template-loja/template-loja/index.html">Página Inicial|</a>
-        <a href="file:///C:/Users/Kenzie-PC/Desktop/lamarr-Bruna-Santos/modulo2/html-sistema-loja/template-loja/template-loja/ctrl-estoque.html">Controle de Estoque|</a>
-        <a href="file:///C:/Users/Kenzie-PC/Desktop/lamarr-Bruna-Santos/modulo2/html-sistema-loja/template-loja/template-loja/add-produto.html">Adicionar Produto|</a>
-        <a href="file:///C:/Users/Kenzie-PC/Desktop/lamarr-Bruna-Santos/modulo2/html-sistema-loja/template-loja/template-loja/funcionarios.html">Funcionários|</a>
+    <nav style = "text-align: center;">
+        <a href="http://127.0.0.1:5500/template-loja/template-loja/index.html" class="menu-horizontal"> Página Inicial</a>
+        <a href="http://127.0.0.1:5500/template-loja/template-loja/ctrl-estoque.html" class="menu-horizontal">Controle de Estoque</a>
+        <a href="http://127.0.0.1:5500/template-loja/template-loja/add-produto.html"class="menu-horizontal">Adicionar Produto</a>
+        <a href="http://127.0.0.1:5500/template-loja/template-loja/funcionarios.html"class="menu-horizontal">Funcionários</a>
     </nav>
 
-    
-    <h2>Adicionar Produto</h2>
-    <form action="">
-            <label for="link-foto">Link para foto: </label>
-            <input type="url" id="link-foto" name="link-foto">
-            <br>
-     
-            <label for="descricao"> Descrição do produto:</label>
-            <!-- Adicione o id apropriado para o input abaixo -->
-            <input type="text" id="descricao" name="descrição">
-            <br>
-            <label for="preco"> Preço (em R$): </label></label>
-            <!-- Adicione o id apropriado e o type para receber números abaixo -->
-            <input type="number" id="preco" name="preco">
+    <div class="arrumarRodape">
+        <h4 class="titulos">Adicionar produtos</h4>
+        <form action="">
+
+            <label for="link-foto" class="produtos">Link para foto:</label>
+            <input class= "caixa-produtos" type="url" id="link-foto" name="link-foto">
             <br>
 
-            <!-- Preencha as propriedades necessárias para os elementos abaixo -->
-            <label for = "quantidade"> Quantidade disponível: </label>
-            <input type="number" id="quantidade" name="quantidade">
-
+            <label for="descricao" class= "produtos">Descrição do produto:</label>
+            <input class= "caixa-produtos" type="text" id="descricao" name="descrição">
             <br>
-            <!-- Adicione ao type do botão abaixo o valor para que ele submeta o formulário -->
-            <button type="submit">Adicionar</button>
 
-    </form>
+            <label for="preco" class= "produtos">Preço (em R$): </label>
+            <input class= "caixa-produtos" type="number" id="preco" name="preco">
+            <br>
+
+            <label for = "quantidade" class= "produtos">Quantidade disponível: </label>
+            <input class= "caixa-produtos"type="number" id="quantidade" name="quantidade">
+            <br>
+
+            <button class= "botao" type="submit">Adicionar</button>
+
+        </form>
+    </div>
+    <footer>
+        <p class="rede-social">Siga-nos nas redes sociais!</p>
+        <img src="./img/twitter.png"/>
+        <img src="./img/facebook.png"/>
+        <img src="./img/linkedin.png" />
+    </footer>
+</body>
+</html>
 
 </body>
 </html>

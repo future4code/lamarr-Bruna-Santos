@@ -5,24 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Controle de Estoque</title>
+    <link href="style.css" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <p>Plus Ultra Store</p>
-    </header>
+
     
-    <nav>
-        <a href="file:///C:/Users/Kenzie-PC/Desktop/lamarr-Bruna-Santos/modulo2/html-sistema-loja/template-loja/template-loja/index.html"> Página Inicial|</a>
-        <a href="file:///C:/Users/Kenzie-PC/Desktop/lamarr-Bruna-Santos/modulo2/html-sistema-loja/template-loja/template-loja/ctrl-estoque.html">Controle de Estoque|</a>
-        <a href="file:///C:/Users/Kenzie-PC/Desktop/lamarr-Bruna-Santos/modulo2/html-sistema-loja/template-loja/template-loja/add-produto.html">Adicionar Produto|</a>
-        <a href="file:///C:/Users/Kenzie-PC/Desktop/lamarr-Bruna-Santos/modulo2/html-sistema-loja/template-loja/template-loja/funcionarios.html">Funcionários</a>|</a>
+    <nav style = "text-align: center;">
+        <a href="http://127.0.0.1:5500/template-loja/template-loja/index.html" class="menu-horizontal"> Página Inicial</a>
+        <a href="http://127.0.0.1:5500/template-loja/template-loja/ctrl-estoque.html" class="menu-horizontal">Controle de Estoque</a>
+        <a href="http://127.0.0.1:5500/template-loja/template-loja/add-produto.html"class="menu-horizontal">Adicionar Produto</a>
+        <a href="http://127.0.0.1:5500/template-loja/template-loja/funcionarios.html"class="menu-horizontal">Funcionários</a>
     </nav>
 
-  <h2>Controle de Estoque</h2>
+  <h4 class="titulos">Controle de Estoque</h4>
 
 
     <table>
-        <tr>
+        <tr class="menu-funcionarios">
             <th>Foto</th>
             <th>Descrição</th>
             <th>Preço</th>
@@ -30,44 +29,51 @@
         </tr>
 
         <tr>
-            <td><img height= 200px src="./img/funk.jpg" alt="Boneco Funko POP do All Might em sua versão enfraquecido."/></td>
-            <td>Funko POP </td>
-            <td>R$ 120,00</td>
-            <td>5</td>
+            <td class="primeiraLinha"><img height= 100px src="./img/funk.jpg" alt="Boneco Funko POP do All Might em sua versão enfraquecido."/></td>
+            <td class="texto">Funko POP </td>
+            <td class="texto">R$ 120,00</td>
+            <td class="texto">5</td>
 
         </tr>
 
         <tr>
-            <td><img height= 200px  src="./img/box.jpg" alt=" Capa dos dez livros "/></td>
-            <td> Coleção 10 livros </td>
-            <td>R$ 1.300,00</td>
-            <td>3</td>
+            <td><img height= 100px  src="./img/box.jpg" alt=" Capa dos dez livros "/></td>
+            <td class="texto"> Coleção 10 livros </td>
+            <td class="texto">R$ 1.300,00</td>
+            <td class="texto">3</td>
 
         </tr>
 
         <tr>
-            <td><img height= 200px  src="./img/chaveiro.jpg" alt="Chaveiro Shoto Todoroki com seus dois poderes em ação: Metade fogo e metade gelo. "/></td>
-            <td>Chaveiro </td>
-            <td>R$ 50,00</td>
-            <td>10</td>
+            <td class="texto"><img height= 100px  src="./img/chaveiro.jpg" alt="Chaveiro Shoto Todoroki com seus dois poderes em ação: Metade fogo e metade gelo. "/></td>
+            <td class="texto">Chaveiro </td>
+            <td class="texto">R$ 50,00</td>
+            <td class="texto">10</td>
         </tr>
 
         <tr>
-            <td><img height= 200px  src="./img/adesivos.jpg" alt="Kit com 7 adesivos: 1 Midoryia, 1 All Might, 1 Eraser, 1 Todoroki, 1 Bakuogo com o meme da Nazaré, 1 Fumikage e 1 com todo o elenco."/></td>
-            <td>Kit adesivos</td>
-            <td>R$ 7,00</td>
-            <td>20</td>
+            <td class="texto"><img height= 100px  src="./img/adesivos.jpg" alt="Kit com 7 adesivos: 1 Midoryia, 1 All Might, 1 Eraser, 1 Todoroki, 1 Bakuogo com o meme da Nazaré, 1 Fumikage e 1 com todo o elenco."/></td>
+            <td class="texto">Kit adesivos</td>
+            <td class="texto">R$ 7,00</td>
+            <td class="texto">20</td>
         </tr>
         
-        <!-- Crie mais uma linha desta tabela abaixo \/ -->
         <tr>
-            <td><img height= 200px  src="./img/copo.jpg" alt=" Copo térmico preto com uma arte escrita Plus Ultra Go Beyond, Class 1-A "/></td>
-            <td>Copo térmico</td>
-            <td>R$ 33,00</td>
-            <td>14</td>
+            <td class="texto"><img height= 100px  src="./img/copo.jpg" alt=" Copo térmico preto com uma arte escrita Plus Ultra Go Beyond, Class 1-A "/></td>
+            <td class="texto">Copo térmico</td>
+            <td class="texto">R$ 33,00</td>
+            <td class="texto">14</td>
 
         </tr>
     </table>
+
+    <footer>
+        <p class="rede-social">Siga-nos nas redes sociais!</p>
+        <img src="./img/twitter.png"/>
+        <img src="./img/facebook.png"/>
+        <img src="./img/linkedin.png" />
+    </footer>
+
 
 </body>
 </html>
