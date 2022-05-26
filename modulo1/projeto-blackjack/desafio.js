@@ -11,7 +11,7 @@
  * 
  */
 
-    console.log("Boas vindas ao jogo de Blackjack!")
+ console.log("Boas vindas ao jogo de Blackjack!")
 
     confirm("Quer iniciar uma nova rodada?")
     let primeiraCartaDoUsuario = comprarCarta()
@@ -71,4 +71,4 @@
        alert (`Suas cartas são ${cartaDoUsuario}. Sua pontuação é ${acumuladoUsuario}.\n`+
        `As cartas do computador são ${cartaPC}. A pontuação do computador é ${acumuladoPC}.\n`+
        `O computador ganhou!`)
-    }
+    } 
