@@ -1,0 +1,131 @@
+body{
+    background-color: white;
+    min-height: 100vh;
+}
+*{
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.titulos{
+    color:rgb(63, 198, 252);
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    margin: 20px;
+    font-size: 22px;
+
+}
+
+.menu-horizontal{
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 22px;
+    text-decoration: none; 
+    color: rgb(233, 245, 248);
+    margin: 0px 5px;
+    border-radius: 20px;
+    padding: 10px 25px; 
+}
+
+.menu-funcionarios{
+    color: rgb(63, 198, 252);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    margin: 0px 5px;
+    
+
+}
+
+footer{
+    bottom: 0px;
+    margin: 0px;
+    background-color: rgb(63, 198, 252);
+    width: 100%;
+    text-align: center;
+    line-height: 60px;
+}
+
+.rede-social{
+    font-size: 20px;
+    color:white
+}
+
+
+a:hover{
+    background-color: rgb(164, 234, 252);
+    height: 20px;
+}
+
+a:link{
+    color:red;
+}
+
+
+nav{
+    background-color: rgb(63, 198, 252);
+    height: 35px;
+    
+}
+
+.produtos{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 0 20px 5px;
+    color:rgb(155, 144, 144);
+    
+}
+
+.caixa-produtos{
+    margin: 5px 20px;
+    border-radius: 5px 2px;
+    border: 2px solid rgb(37, 133, 223);
+    height: 20px;
+    width: 200px;
+}
+
+.caixa-produtos:focus-visible{
+    border: 2px solid rgb(7, 157, 226);
+    outline: none;
+}
+
+.arrumarRodape{
+    min-height: 80vh;
+}
+
+
+.botao{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 2px 20px;
+    height: 25px;
+    width: 400px;
+    border-radius: 10px;
+    background-color: rgb(63, 198, 252);
+    color:white;
+    border: rgb(63, 198, 252);
+    font-size: 17px;
+
+}
+
+.texto{
+    color:rgb(155, 144, 144);
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+td{
+    padding: 0 16px 20px 16px;
+
+}
+
+.primeiraLinha{
+    padding-top: 20px;
+}
+
+.banner{
+    margin: 1px 0 20px 0;
+}
+
+.home{
+    margin: 0 0 20px 0;
+}
+

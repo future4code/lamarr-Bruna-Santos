@@ -5,24 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Funcionários</title>
+    <link href="style.css" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <p>Plus Ultra Store</p>
-    </header>
     
-    <nav>
-        <a href="file:///C:/Users/Kenzie-PC/Desktop/lamarr-Bruna-Santos/modulo2/html-sistema-loja/template-loja/template-loja/index.html">Página Inicial|</a>
-            <a href="file:///C:/Users/Kenzie-PC/Desktop/lamarr-Bruna-Santos/modulo2/html-sistema-loja/template-loja/template-loja/ctrl-estoque.html">Controle de Estoque|</a>
-            <a href="file:///C:/Users/Kenzie-PC/Desktop/lamarr-Bruna-Santos/modulo2/html-sistema-loja/template-loja/template-loja/add-produto.html">Adicionar Produto|</a>
-            <a href="file:///C:/Users/Kenzie-PC/Desktop/lamarr-Bruna-Santos/modulo2/html-sistema-loja/template-loja/template-loja/funcionarios.html">Funcionários|</a>
+    <nav style = "text-align: center;">
+        <a href="http://127.0.0.1:5500/template-loja/template-loja/index.html" class="menu-horizontal"> Página Inicial</a>
+        <a href="http://127.0.0.1:5500/template-loja/template-loja/ctrl-estoque.html" class="menu-horizontal">Controle de Estoque</a>
+        <a href="http://127.0.0.1:5500/template-loja/template-loja/add-produto.html"class="menu-horizontal">Adicionar Produto</a>
+        <a href="http://127.0.0.1:5500/template-loja/template-loja/funcionarios.html"class="menu-horizontal">Funcionários</a>
     </nav>
 
-    <h2>Funcionários</h2>
+    <h4 class="titulos">Conheça nossa equipe!</h4>
     <!-- Crie uma lista de funcionários usando as tags que você aprendeu hoje abaixo \/ -->
     
         <table>
-            <tr>
+            <tr class="menu-funcionarios">
                 <th>Imagem</th>
                 <th>Nome</th>
                 <th>Pronome</th>
@@ -30,41 +28,50 @@
                 <th>Telefone</th>
                 <th>e-mail</th>
             </tr>
-            <tr>
-                <td><img height= 200px src="./img/929e9e6d2a1b7caad1d64041fd9fb98430d4fa1ar1-400-400v2_00.jpg" alt="Imagem do funcionário Midoryia: Cabelo verde e blusa branca."/></td>
-                <td>Izuku</td>
-                <td>Ele/Dele</td>
-                <td>Diretor </td>
-                <td>41 3222-2222</td>
-                <td>midoriya@plusultra.com </td>
+            
+            <tr class="funcionario">
+                <td class="primeiraLinha"><img src="./img/929e9e6d2a1b7caad1d64041fd9fb98430d4fa1ar1-400-400v2_00.jpg" alt="Imagem do funcionário Midoryia: Cabelo verde e blusa branca."/></td>
+                <td class="texto"> Izuku </td>
+                <td class="texto">Ele/Dele</td>
+                <td class="texto">Diretor </td>
+                <td class="texto">41 3222-2222</td>
+                <td class="texto">midoriya@plusultra.com </td> 
             </tr>
-            <tr>
-                <td><img height= 200px src="./img/miii.png" alt="Imagem do funcionário All Might: Cabelo loiro"/></td>
-                <td>All Might</td>
-                <td>Ele/Dele</td>
-                <td>Atendimento</td>
-                <td>41 3222-2233</td>
-                <td>allmighta@plusultra.com </td>
+            <tr class="funcionario">
+                <td><img src="./img/20200916-d9ffbeb5e7862a243ce822bb89d12b66_750x750-555x555.jpg" alt="Imagem do funcionário All Might: Cabelo loiro"/></td>
+                <td class="texto">All Might</td>
+                <td class="texto">Ele/Dele</td>
+                <td class="texto">Atendimento</td>
+                <td class="texto">41 3222-2233</td>
+                <td class="texto">allmighta@plusultra.com </td>
 
             </tr>
-            <tr>
-                <td><img height= 200px src="./img/ochaco.jpeg" alt="Imagem do funcionário Ochaco: Castanho claro"/></td>
-                <td>Ochaco</td>
-                <td>Ela/Dela</td>
-                <td>Estoque</td>
-                <td>41 3222-2234</td>
-                <td>ochaco@plusultra.com </td>
+            <tr class="funcionario">
+                <td><img src="./img/ochaco.jpeg" alt="Imagem do funcionário Ochaco: Castanho claro"/></td>
+                <td class="texto">Ochaco</td>
+                <td class="texto">Ela/Dela</td> 
+                <td class="texto">Estoque</td>
+                <td class="texto">41 3222-2234</td>
+                <td class="texto">ochaco@plusultra.com </td>
 
             </tr>
-            <tr>
-                <td><img height= 200px src="./img/todo.png" alt="Imagem do funcionário Shoto: Cabelo vermelho e branco."/></td>
-                <td>Shoto</td>
-                <td>Ele/Dele</td>
-                <td>Expedição</td>
-                <td>41 3222-2239</td>
-                <td>todoroki@plusultra.com </td>
+            <tr class="funcionario">
+                <td><img src="./img/eb5309a5419f591b0b96c04e75fd020d.jpg" alt="Imagem do funcionário Shoto: Cabelo vermelho e branco."/></td>
+                <td class="texto">Shoto</td>
+                <td class="texto">Ele/Dele</td>
+                <td class="texto">Expedição</td>
+                <td class="texto">41 3222-2239</td>
+                <td class="texto">todoroki@plusultra.com </td>
 
             </tr>
         </table>
+        <footer>
+            <p class="rede-social">Siga-nos nas redes sociais!</p>
+            <img src="./img/twitter.png"/>
+            <img src="./img/facebook.png"/>
+            <img src="./img/linkedin.png" />
+        </footer>
+    </body>
+    </html>
 </body>
 </html
