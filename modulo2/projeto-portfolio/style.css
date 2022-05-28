@@ -23,13 +23,24 @@
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     color:rgb(87, 84, 84);
     font-size: 14px;
-    margin: 10px 0 0 0px
+    margin: 10px 0 10px 0;
+    text-align: justify;
+    
+}
+
+.textoDescricao{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color:rgb(87, 84, 84)   ;
+    font-size: 14px;
+    margin: 10px 0px 10px 0px;
+    text-indent: 1cm;
+    text-align: justify;
 }
 
 .redeSocial{
     font-family: 'Amatic SC', cursive;
     font-size: 35px;
-    color:#fd5da5;
+    color:#ffffff;
 }
 
 .menu-horizontal {
@@ -49,8 +60,12 @@ a:hover {
     height: 40px;
 }
 
+input{
+    padding: 8px 10px;
+}
+
 input:active{
-    border-color: #9d4edd;
+    outline: #9d4edd;
 }
 
 input:hover{
@@ -68,9 +83,11 @@ input:hover{
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     color:#575454;
     font-size: 15px;
-    margin: 10px 0 0 0px;
+    margin: 10px 0 2px 0px;
 
 }
+
+
 
 .itensTextoInicial{
     font-family:Verdana, Geneva, Tahoma, sans-serif;
@@ -136,14 +153,12 @@ body{
 footer{
     text-align: center;
     background-color: #f7bbd6;
-    bottom: 20px 20px;
-    position:absolute;
+    /* bottom: 20px 20px; */
     width: 100%;
     }
 
 .container{
     display:flex;
-    height: 87vh;
     justify-content: center;
 }
 
@@ -154,8 +169,8 @@ footer{
 }
 
 .imagemProjeto{
-    text-align: center;
     margin: 200px;
+    padding: 0 60px;
     
 }
 
@@ -175,4 +190,13 @@ footer{
 
 .imagemIndex{
     margin: 0px 0;
+}
+
+textarea{
+    padding: 8px 10px;
+}
+
+.flex{
+    display: flex;
+    float:none;
 }
