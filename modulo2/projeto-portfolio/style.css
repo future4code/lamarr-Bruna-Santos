@@ -1,0 +1,202 @@
+*{
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+.chamada{
+    font-family: 'Amatic SC', cursive;
+    font-size: 35px;
+    color:#fd5da5;
+    margin: 10px 0 10px 20px
+
+}
+
+.itensInicial{
+    font-family: 'Amatic SC', cursive;
+    font-size: 35px;
+    color:#fd5da5;
+    margin: 10px 20px 20px 20px;
+    text-align:center;
+}
+
+.curiosidadeInicial{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color:rgb(87, 84, 84);
+    font-size: 14px;
+    margin: 10px 0 10px 0;
+    text-align: justify;
+    
+}
+
+.textoDescricao{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color:rgb(87, 84, 84)   ;
+    font-size: 14px;
+    margin: 10px 0px 10px 0px;
+    text-indent: 1cm;
+    text-align: justify;
+}
+
+.redeSocial{
+    font-family: 'Amatic SC', cursive;
+    font-size: 35px;
+    color:#ffffff;
+}
+
+.menu-horizontal {
+    font-family: 'Amatic SC', cursive;
+    font-size: 35px;
+    text-decoration: none;
+    margin: 0 25px;
+    color:#ffffff;
+    border-radius: 20px;
+    height: 30px;
+    width: 200px;
+    padding: 0 25px;
+}
+
+a:hover {
+    background-color: #e7bbf7;
+    height: 40px;
+}
+
+input{
+    padding: 8px 10px;
+}
+
+input:active{
+    outline: #9d4edd;
+}
+
+input:hover{
+    border-color: #841adb;
+}
+
+.texto{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color:rgb(87, 84, 84);
+    font-size: 15px;
+    margin: 0 20px 20px 20px
+}
+
+.textoInicial{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color:#575454;
+    font-size: 15px;
+    margin: 10px 0 2px 0px;
+
+}
+
+
+
+.itensTextoInicial{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color:rgb(97, 91, 91);
+    font-size: 14px;
+    margin: 10px 0 0 0px;
+}
+
+.textoProjeto{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color:rgb(87, 84, 84);
+    font-size: 15px;
+    margin: 10px 0 0 0px;
+    text-indent: 1cm;
+    text-align: justify;
+}
+
+nav {
+    text-align: center;
+    background-color: #fd5da5;
+}
+
+.formulario{
+    font-family: 'Amatic SC', cursive;
+    font-size: 25px;
+    color: #9d4edd;
+    margin: 0 0 0 20px;   
+}
+
+.caixaMensagem{
+    height: 180px;
+    width: 600px;
+    border-radius: 8px;
+    border: 1px solid #fd5da5;
+    
+}
+
+.caixaFormulario{
+    height: 40px;
+    width: 600px;
+    border-radius: 8px;
+    border: 1px solid #fd5da5;
+}
+
+
+.botao{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 20px; 
+    margin:20px;
+    border-radius: 20px;
+    height: 35px;
+    width: 600px;
+    border: none;
+    background-color:#f497ca; 
+    border-color:#f497ca; 
+    color:white;
+}
+
+body{
+    background-color: #fadde1;
+}
+
+footer{
+    text-align: center;
+    background-color: #f7bbd6;
+    /* bottom: 20px 20px; */
+    width: 100%;
+    }
+
+.container{
+    display:flex;
+    justify-content: center;
+}
+
+.fundo{
+    border-radius: 30px;
+    width: 40%;
+
+}
+
+.imagemProjeto{
+    margin: 200px;
+    padding: 0 60px;
+    
+}
+
+.imagemPortfolio{
+    margin: 10px 40px;
+    border-radius: 15px;
+    text-align:start;
+    
+}
+
+.imagemPortfolioDois{
+    margin: 10px 0px;
+    border-radius: 15px;
+    text-align:start;
+    
+}
+
+.imagemIndex{
+    margin: 0px 0;
+}
+
+textarea{
+    padding: 8px 10px;
+}
+
+.flex{
+    display: flex;
+    float:none;
+}
