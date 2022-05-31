@@ -1,0 +1,120 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+a, button {
+    cursor: pointer;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: mediumvioletred;
+    padding: 10px 20px;
+    
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    height: 3vh;
+}
+
+.header-img{
+    height: 25px;
+    margin-right: 15px;
+}
+
+
+button{
+    padding: 0 10px;
+    height: 25px;
+    font-size: 14px;
+}
+
+.botao{
+    font-size: 16px;
+    text-align: center;
+    align-items: center;
+
+}
+
+
+footer{
+    background-color: mediumvioletred;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 20px;
+    height: 3vh;
+}
+
+nav{
+    display: flex;
+    flex-direction: column;
+    background-color: #f2d0e0;
+    width: 30%;
+    padding: 10px 20px;
+    height: 92vh;
+
+
+}
+
+main{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 20px;
+    height: 850px;
+}
+
+.container{
+    display: flex;
+}
+
+.setinha{
+    justify-content: end;
+}
+
+section{
+    margin: 10px;
+    width: 300px;
+    text-align: justify;
+    height: 400px;
+    box-shadow: 10px 5px 5px darkgray;
+}
+
+.tituloImagem{
+    text-align: center;
+    margin: 5px 0 15px;
+    font-size: 25px;
+}
+
+.textoImagem{
+    font-size: 18px;
+    text-align: center;
+    margin: 20px 15px;
+}
+
+.menuHorizontal{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    margin: 6px 0 6px 0;
+}
+
+
+.flex-div {
+    display: flex;
+    align-items: center;
+}
+
+.menu-img {
+    height: 40px;
+    width: 40px;
+    margin-right: 10px;
+}
