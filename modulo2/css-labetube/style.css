@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    display: grid;
+    grid-template-columns: 85% 15%;
+    background-color: rgb(128, 4, 165);
+    align-items: center;
+    
+}
+
+
+.titulo{
+    margin: 0 20px;
+    font-size: 35px;
+    color: rgb(255, 238, 7);
+}
+
+.div-pai{
+    display: grid;
+    grid-template-rows: auto 84vh 8.3vh;
+
+}
+
+#busca{
+    padding: 10px;
+    margin: 20px 100px 20px 0;
+    width: 80%;
+    border-radius: 6px;
+    border: none;
+}
+
+.meio{
+    display: grid;
+}
+
+.principal{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+
+.card{
+
+    display: grid;
+    grid-template-rows: auto 1fr;
+    justify-content: center;
+    margin: 30px 80px;
+    width: 300px;
+    text-align: justify;
+    height: 350px;
+    border: 1px solid purple;
+
+}
+
+.img-card{
+    width: 300px;
+
+}
+
+.tituloImagem{
+    text-align: start;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    margin: 10px 5px 5px 5px;
+}
+
+.rodape{
+    background-color: rgb(128, 4, 165);
+}
+
+.div-video{
+    display: grid;
+    justify-content: center;
+    
+}
+
+.video{
+    border-radius: 2px;
+
+}
+
+.textoVideo{
+    font-size: 30px;
+    margin: 20px 0 2px 0;
+    text-align: center;
+    color: purple
+}
+
+
