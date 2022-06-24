@@ -1,0 +1,29 @@
+.bigcard-container {
+    display: flex;
+    align-items: center;
+    border: 2px solid rgb(46, 116, 173);
+    padding: 20px 10px;
+    margin-bottom: 10px;
+    height: 200px;
+}
+
+.bigcard-container > img {
+    width: 150px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+.bigcard-container h4 {
+    margin-bottom: 15px;
+    color:gray;
+}
+
+.bigcard-container p {
+    color:gray;
+}
+
+.bigcard-container > div {
+    display: flex;
+    flex-direction: column;
+    justify-items: flex-start;
+}
