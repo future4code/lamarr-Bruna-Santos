@@ -1,0 +1,25 @@
+.box-pequeno{
+    display: flex;
+    justify-content: start;
+    display: flex;
+    align-items: center;
+    border: 2px solid rgb(46, 116, 173);
+    padding: 20px 10px;
+    height: 100px;
+}
+
+.box-pequeno > img {
+    width: 90px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+.box-pequeno > h4 {
+    color:gray;
+}
+.box-pequeno > p{
+    color: gray;
+}
+.texto{
+    margin: 0 10px;
+}
