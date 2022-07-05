@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import './style.css'
+import { CommentContainer, InputComentario, Button } from './Style'
 
 
 
@@ -13,12 +13,12 @@ export function SecaoComentario(props) {
 
 
 	return (
-		<div className='CommentContainer'>
-			<input className='InputComentario' nome ="Comentário" onChange={handleInputComentario} 
+		<CommentContainer>
+			<InputComentario nome ="Comentário" onChange={handleInputComentario} 
 				placeholder={inputComentario}
 
 			/>
-			<button onClick={props.aoEnviar}>Enviar</button>
-		</div>
+			<Button onClick={props.aoEnviar}>Enviar</Button>
+		</CommentContainer>
 	)
 }

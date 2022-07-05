@@ -10,10 +10,27 @@ import mensagem from './img/chat.png'
 import adicionar from './img/adicionar.png'
 import bussola from './img/bussola.png'
 import like from './img/gostar.png'
+import {MainContainer, Header, Input, DivIcones, Icones} from './Style'
 
 
 
 function App() {
+  const [listaDePost, setListaDePost]=useState([
+    {nomeUsuario:"Paulinha", fotoUsuario:"https://picsum.photos/50/50", fotoPost: "https://picsum.photos/200/150"},
+    {nomeUsuario:"bruuna.cs", fotoUsuario:brunaIcone, fotoPost: brunaPost,},
+    {nomeUsuario:"Natureismetal", fotoUsuario:natureIcone, fotoPost: naturePost,}
+  ])
+
+  let postRenderizado= listaDePost.map((post, index)=>(
+    <Post key={index}
+    nomeUsuario={post.nomeUsuario}
+    fotoUsuario={post.fotoUsuario}
+    fotoPost={post.fotoPost}
+    />
+  )
+  )
+  console.log(postRenderizado)
+  
   const [inputPesquisar, setInputPesquisar]=useState("Pesquisar")
 
   const handleInputPesquisar=(event)=>{
@@ -21,35 +38,23 @@ function App() {
   }
 
   return(
-    <div className='MainContainer'>
-      <header>
+    <MainContainer>
+      <Header>
         <p>Insta4</p>
-        <input nome="Pesquisar" onChange={handleInputPesquisar} placeholder={inputPesquisar}></input>
-        <div className="div-icones">
-          <img className="icones" src={home}/>
-          <img className="icones" src={mensagem}/>
-          <img className="icones" src={adicionar}/>
-          <img className="icones" src={bussola}/>
-          <img className="icones" src={like}/>
-        </div>
+        <Input nome="Pesquisar" onChange={handleInputPesquisar} placeholder={inputPesquisar}></Input>
+        <DivIcones>
+          <Icones src={home}/>
+          <Icones src={mensagem}/>
+          <Icones src={adicionar}/>
+          <Icones src={bussola}/>
+          <Icones src={like}/>
+        </DivIcones>
         
-      </header>
-            <Post
-              nomeUsuario={'paulinha'}
-              fotoUsuario={'https://picsum.photos/50/50'}
-              fotoPost={'https://picsum.photos/200/150'}
-            />
-            <Post
-              nomeUsuario={'bruuna.cs'}
-              fotoUsuario={brunaIcone}
-              fotoPost={brunaPost}
-            />
-            <Post
-              nomeUsuario={'natureismetal'}
-              fotoUsuario={natureIcone}
-              fotoPost={naturePost}
-            />
-    </div>
+      </Header>
+      {postRenderizado}
+
+          
+    </MainContainer>
   )
 
 }

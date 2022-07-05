@@ -1,26 +1,24 @@
-.CommentContainer{
+import styled from "styled-components";
+
+export const CommentContainer=styled.div`
     display: flex;
     justify-content: center;
     padding: 5px
-}
+`
 
-
-.InputComentario { 
+export const InputComentario=styled.input`
     width: 100%;
     height: 25px;
     margin-right: 5px;
     margin-bottom: 5px;
+`
 
-}
-
-button{
+export const Button=styled.button`
     margin-bottom: 5px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-
-button:hover{
-    background-color: rgb(173, 173, 173);
-    color:white;
-    border: 1px solid rgb(173, 173, 173);
-}
-
+    :hover{
+        background-color: rgb(173, 173, 173);
+        color:white;
+        border: 1px solid rgb(173, 173, 173);
+    }
+`
