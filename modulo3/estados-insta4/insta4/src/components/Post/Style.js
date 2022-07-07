@@ -11,7 +11,12 @@ export const PostHeader=styled.div`
     height: 40px;
     display: flex;
     align-items: center;
-    padding-left: 10px
+    padding-left: 10px;
+    p{
+        font-family: sans-serif;
+        font-weight: bold;
+        color: #14bff3;
+    }
 `
 
 export const UserPhoto=styled.img`
@@ -23,9 +28,7 @@ export const UserPhoto=styled.img`
 
 export const PostPhoto=styled.img`
     width: 100%;
-
 `
-
 export const PostFooter=styled.div`
     height: 40px;
     display: flex;
@@ -33,4 +36,5 @@ export const PostFooter=styled.div`
     padding: 0 10px;
     justify-content: space-between
 `
+
 
