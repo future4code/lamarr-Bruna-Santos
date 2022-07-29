@@ -6,6 +6,7 @@ export const Labenusers = () =>{
     const [nomeInput, setNomeInput]=useState()
     const [emailInput, setEmailInput]=useState()
     const [visualizarUsuarios, setVisualizarUsuarios]=useState(false)
+    const [nomePesquisar, setNomePesquisar]=useState()
 
     const atualizarNome=(event)=>{
         setNomeInput(event.target.value)
@@ -15,11 +16,17 @@ export const Labenusers = () =>{
         setEmailInput(event.target.value)
     }
 
+    const pesquisarNome=(event)=>{
+        setNomePesquisar(event.target.value)
+    }
+
     const componentesLista=minhaLista.map((item, index)=>{
+
         return(
             <div key={index}>
                 {item.name}
                 {item.email}
+                <button onClick={()=>deletarUsuario (item.id)}>x</button>
             </div>
         )
     })
@@ -42,6 +49,10 @@ export const Labenusers = () =>{
         "email": emailInput
     }
 
+    const query={
+        
+    }
+
     const getAllUsers=()=>{
         axios.get(url, meuHeader).then((response)=>{
             setMinhaLista(response.data)
@@ -62,6 +73,22 @@ export const Labenusers = () =>{
         setMinhaLista("")
     }
 
+    const deletarUsuario = (id) =>{
+        axios.delete(`${url}/${id}`, meuHeader)
+        .then(()=>{
+            alert("Usuário removido com sucesso")
+            getAllUsers()
+        })
+
+    }
+
+    const searchUsers=()=>{
+        axios.get(`${url}/search?name=${nomePesquisar}`, meuHeader)
+        .then((response)=>{
+            setMinhaLista(response.data)
+        })
+    }
+
 
 
 
@@ -73,8 +100,8 @@ export const Labenusers = () =>{
             <>
                 {componentesLista}
                 <h3>Procurar usuário</h3>
-                <input placeholder="Nome exato para buscar"/>
-                <button>Salvar edição</button>
+                <input type="text" value={nomePesquisar} onChange={pesquisarNome} placeholder="Nome exato para buscar"/>
+                <button onClick={searchUsers}>Salvar edição</button>
 
             </>
             :
