@@ -1,6 +1,10 @@
 SURGE:
 tight-honey.surge.sh
 
+# BACKGROUND IMAGEM:
+https://www.freepik.com/vectors/galaxy-space -> Galaxy space vector created by pikisuperstar - www.freepik.com
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

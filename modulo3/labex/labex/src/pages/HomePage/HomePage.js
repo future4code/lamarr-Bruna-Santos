@@ -1,5 +1,5 @@
 import React from "react";
-import { DivBotoesHomePage, DivHomePage } from "./Styled";
+import { DivBackground, DivBotoesHomePage, DivHomePage, } from "./Styled";
 import {useNavigate} from "react-router-dom"
 
 export const HomePage=()=>{
@@ -14,13 +14,15 @@ export const HomePage=()=>{
         navigate("/trips/list")
     }
     return(
-        <DivHomePage>
-            <h1>LabeX</h1>
-            <DivBotoesHomePage>
-                <button onClick={pageListaDeViagens}>Viagens</button>
-                <button onClick={pageAreaDoAdmin}>Área do Admin</button>
-            </DivBotoesHomePage>
-        </DivHomePage>
+        <DivBackground>
+            <DivHomePage>
+                <h1>Labe X</h1>
+                <DivBotoesHomePage>
+                    <button onClick={pageListaDeViagens}>Viagens</button>
+                    <button onClick={pageAreaDoAdmin}>Área do Admin</button>
+                </DivBotoesHomePage>
+            </DivHomePage>
+            </DivBackground>
     )
 
 }

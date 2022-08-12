@@ -1,11 +1,12 @@
+import { GlobalStyle } from "./GlobalStyled";
 import { Rotas } from "./pages/Rotas";
 
 function App() {
   return (
-    <div className="App">
+    <>
+      <GlobalStyle/>
       <Rotas/>
-    </div>
+    </>
   );
 }
-
 export default App;
