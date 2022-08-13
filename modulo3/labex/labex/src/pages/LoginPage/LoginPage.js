@@ -17,7 +17,7 @@ export const LoginPage=()=>{
 
     return(
         <DivLoginPage>
-            <h2>Login</h2>
+            <h1>Login</h1>
             <input placeholder="E-mail"/>
             <input type="password" nome="senha"placeholder="Senha"/>
             <DivBotoesLoginPage>

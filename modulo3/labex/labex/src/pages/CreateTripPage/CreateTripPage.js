@@ -13,7 +13,7 @@ export const CreateTripPage=()=>{
 
     return(
         <DivCriarPaginas>
-            <h2>CRIAR VIAGENS</h2>
+            <h1>CRIAR VIAGENS</h1>
             <form>
                 <input placeholder="Nome"/>
                 <select>

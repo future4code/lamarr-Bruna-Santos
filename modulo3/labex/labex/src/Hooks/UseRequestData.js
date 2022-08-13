@@ -4,11 +4,9 @@ import axios from 'axios'
 export const useRequestData=()=>{
 
 const [listaDeViagens, setListaDeViagens]=useState([])
-const [listaDeCandidatos, setListaDeCandidatos]=useState([])
 const [isLoading, setIsLoading]=useState(false)
 
 const urlViagens="https://us-central1-labenu-apis.cloudfunctions.net/labeX/Bruna-carvalho-lamarr/trips"
-const urlCandidatos="https://us-central1-labenu-apis.cloudfunctions.net/labeX/Bruna-carvalho-lamarr/trips/:id/apply"
 
 
 const obterViagens=()=>{
@@ -18,11 +16,6 @@ const obterViagens=()=>{
         setListaDeViagens(response.data.trips)
     })
 }
-
-/* const obterCandidatos-()=>{
-    setIsLoading(true)
-    axios.post(urlCandidatos)
-} */
 
 useEffect(()=>{
     obterViagens()

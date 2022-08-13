@@ -1,16 +1,22 @@
 import styled from "styled-components";
+import imagemBackgroundCriarViagens from '../img/background-criar-viagens.png'
+
 
 export const DivCriarPaginas=styled.div`
     display: flex;
     flex-direction: column;
-    width: 98vw;
-    height: 98vh;
+    width: 100vw;
+    height: 100vh;
     justify-content: center;
     align-items: center;
+    background-image: url(${imagemBackgroundCriarViagens});
+    background-size: cover;
 
-    h2{
+    h1{
         font-family: 'Rajdhani', sans-serif;
-        margin-bottom: 10px;        
+        color: #2d1687;
+        font-weight: bold;
+        padding-bottom: 1%;        
     }
 
     form{
@@ -18,19 +24,55 @@ export const DivCriarPaginas=styled.div`
         flex-direction: column;
     }
 
-    input, select{
-        width: 20vw;
+    input{
         margin-bottom: 10px;
         border-radius: 5px;
         border: 2px solid #b9148e;
+        width: 20vw;
         height: 3vh;
         outline: none;
+        color: gray;
+        font-size: 16px;
+        font-family: 'Rajdhani', sans-serif;
+        padding: 3px;
+        :focus {
+                color: #2d1687;
+            }
         ::placeholder{
             padding: 5px;
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 16px;
+            
         }
     }
 
+    select{
+        margin-bottom: 10px;
+        border-radius: 5px;
+        border: 2px solid #b9148e;
+        min-width: 20.5vw;
+        height: 4vh;
+        outline: none;
+        color: gray;
+        font-size: 16px;
+        font-family: 'Rajdhani', sans-serif;
+        padding: 3px;
+        :focus {
+                color: #2d1687;
+            }
+        ::placeholder{
+            padding: 5px;
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 16px;
+            
+        }
+
+    }
 `
+
+
+
+
 
 export const DivBotoesCriarViagem=styled.div`
     display: flex;

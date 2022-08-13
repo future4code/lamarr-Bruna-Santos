@@ -32,7 +32,7 @@ export const LisTripsPage=()=>{
     return(
         <DivHome> 
             {isLoading? 
-            <p>Carregando...</p> 
+            <h3>Carregando...</h3> 
             :
             <>
                 <h1>Lista de Viagens</h1>

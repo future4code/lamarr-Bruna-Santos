@@ -19,7 +19,7 @@ export const AdminHomePage=()=>{
     }
     return(
         <DivAdminHomePage>
-            <h2>Painel administrativo</h2>
+            <h1>Painel administrativo</h1>
             <DivBotoesHomePage>
                 <button onClick={voltar}>Voltar</button>
                 <button onClick={novaViagem}>Criar viagem</button>

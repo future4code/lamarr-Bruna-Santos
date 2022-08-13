@@ -1,15 +1,22 @@
 import styled from "styled-components";
+import imagemBackgroundPainelAdm from '../img/background-paineladm.png'
+
 
 export const DivAdminHomePage=styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 98vh;
-    width: 98vw;
-    h2{
+    height: 100vh;
+    width: 100vw;
+    background-image: url(${imagemBackgroundPainelAdm});
+    background-size: cover;
+
+    h1{
         font-family: 'Rajdhani', sans-serif;
-        margin-bottom: 10px;
+        color: #2d1687;
+        font-weight: bold;
+        padding-bottom: 1%;
     }
 `
 

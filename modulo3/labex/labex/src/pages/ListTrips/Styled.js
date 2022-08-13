@@ -11,6 +11,12 @@ export const DivHome=styled.div`
     align-items: center;
     background-image: url(${imagemBackgroundViagens});
     background-size: cover;
+    h3{
+        font-family: 'Rajdhani', sans-serif;
+        margin-bottom: 10px;
+        color: #2d1687;
+        font-size: 25px;
+    }
     h1{
         font-family: 'Rajdhani', sans-serif;
         padding-top: 2vh;
