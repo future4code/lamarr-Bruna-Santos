@@ -7,10 +7,17 @@ export const DivFormulario=styled.div`
     height: 100vh;
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     background-image: url(${imagemBackgroundFormulario});
     background-size: cover;
+    @media (max-width: 920px){
+        background-image: none;
+        background-color: #F3F4F4;
+    }
+
+
     h2{
         font-family: 'Rajdhani', sans-serif;
         margin-bottom: 10px;
@@ -21,11 +28,18 @@ export const DivFormulario=styled.div`
         font-family: 'Rajdhani', sans-serif;
         margin-bottom: 10px;
         color: #2d1687;
+        @media (max-width: 650px){
+            text-align: end;
+            padding-right: 10%;            
+        }
 
     }
     form{
         display: flex;
         flex-direction: column;
+        @media (max-width: 650px){
+            min-width: 80%;
+        }
 
     input {
         margin-bottom: 10px;
@@ -44,8 +58,11 @@ export const DivFormulario=styled.div`
             padding: 5px;
             font-family: 'Rajdhani', sans-serif;
             font-size: 16px;
-            
+            @media (max-width: 650px){
+                font-size: 18px;
         }
+        }
+        
     }
 
     textarea{
@@ -57,10 +74,12 @@ export const DivFormulario=styled.div`
         font-size: 16px;
         outline: none;
         color: gray;
+        @media (max-width: 650px){
+            font-size: 18px;
+        }
         :focus {
                 color: #2d1687;
             }
-
 
     }
 
@@ -78,6 +97,11 @@ export const DivFormulario=styled.div`
             :focus {
                 color: #2d1687;
             }
+            @media (max-width: 650px){
+                min-width: 80vw;
+                min-height: 5vh;
+                font-size: 18px;
+        }
 
         }
     }
@@ -103,6 +127,11 @@ export const DivBotoesFormulario=styled.div`
             background-color: #b9148e;
             color: white;
             border: #b9148e;
+        }
+
+        @media (max-width: 650px){
+            min-width: 38vw;
+            min-height: 4.5vh;
         }
     }
 `

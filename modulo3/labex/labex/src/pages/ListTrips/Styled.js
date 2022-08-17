@@ -5,12 +5,14 @@ import imagemBackgroundViagens from '../img/background-viagens.png'
 export const DivHome=styled.div`
     display: flex;
     flex-direction: column;
-    width: 100vw;
-    height: 100vh;
+    max-width: 100vw;
+    min-height: 100vh;
     justify-content: flex-start ;
     align-items: center;
     background-image: url(${imagemBackgroundViagens});
     background-size: cover;
+    padding: 25px 0;
+
     h3{
         font-family: 'Rajdhani', sans-serif;
         margin-bottom: 10px;
@@ -21,9 +23,13 @@ export const DivHome=styled.div`
         font-family: 'Rajdhani', sans-serif;
         padding-top: 2vh;
         color: #2d1687;
-        font-weight: bold;
-
+        font-weight: bold
     }
+    @media (max-width: 920px){
+        background-image: none;
+        background-color: #F3F4F4;
+    }
+
 `
 
 export const DivListaViagens=styled.div`
@@ -38,6 +44,19 @@ export const DivListaViagens=styled.div`
     min-height: 20vh;
     margin-bottom: 10px;
     background-color: white;
+    @media (max-width: 650px){
+        min-width: 75vw;
+        min-height: 35vh;
+    }
+    @media (min-width: 750px) and (max-width: 920px){
+        min-width: 60vw;
+        min-height: 20vh;
+    }
+    @media (min-width: 1024px) and (max-width: 1280px){
+        min-width: 40vw;
+        min-height: 30vh;
+    }
+
 
     h2{
         display: flex;
@@ -63,16 +82,19 @@ export const BotoesHome=styled.div`
     display: flex;
     button{
         margin-left: 10px;
-        width: 8vw;
-        height: 4vh;
+        min-width: 8vw;
         border-radius: 10px;
         border: 2px solid black;
         font-family: 'Rajdhani', sans-serif;
         font-size: 20px;
         font-weight: bold;
         color:#b9148e;
+        padding: 10px 20px;
         cursor: pointer;
 
+        @media (max-width: 500px){
+            padding: 5px 10px;
+        }
         :hover{
             background-color: #b9148e;
             color: white;

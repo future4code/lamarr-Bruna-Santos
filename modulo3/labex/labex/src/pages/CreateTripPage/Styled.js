@@ -22,6 +22,9 @@ export const DivCriarPaginas=styled.div`
     form{
         display: flex;
         flex-direction: column;
+        @media (max-width: 650px){
+            width: 82%;
+        }
     }
 
     input{
@@ -35,6 +38,9 @@ export const DivCriarPaginas=styled.div`
         font-size: 16px;
         font-family: 'Rajdhani', sans-serif;
         padding: 3px;
+        @media (max-width: 650px){
+            width: 80vw;
+        }
         :focus {
                 color: #2d1687;
             }
@@ -42,6 +48,9 @@ export const DivCriarPaginas=styled.div`
             padding: 5px;
             font-family: 'Rajdhani', sans-serif;
             font-size: 16px;
+            @media (max-width: 650px){
+                font-size: 18px;
+            }
             
         }
     }
@@ -57,28 +66,29 @@ export const DivCriarPaginas=styled.div`
         font-size: 16px;
         font-family: 'Rajdhani', sans-serif;
         padding: 3px;
+        @media (max-width: 650px){
+            font-size: 18px;
+            height: 5vh;
+            }
         :focus {
                 color: #2d1687;
             }
         ::placeholder{
             padding: 5px;
             font-family: 'Rajdhani', sans-serif;
-            font-size: 16px;
+            font-size: 16px
             
         }
 
     }
 `
 
-
-
-
-
 export const DivBotoesCriarViagem=styled.div`
     display: flex;
+    justify-content: center;
     button{
-        margin-left: 10px;
-        width: 8vw;
+        margin: 0 2px;
+        width: 10vw;
         height: 4vh;
         border-radius: 10px;
         border: 2px solid black;
@@ -87,6 +97,13 @@ export const DivBotoesCriarViagem=styled.div`
         font-weight: bold;
         color:#b9148e;
         cursor: pointer;
+        @media (max-width: 650px){
+            width: 40vw;
+            height: 5vh;
+            border-radius: 12px;
+            font-size: 22px;
+            margin-top: 5%;
+        }
 
         :hover{
             background-color: #b9148e;

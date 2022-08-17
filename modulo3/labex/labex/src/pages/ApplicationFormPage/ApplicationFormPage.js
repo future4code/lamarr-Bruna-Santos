@@ -3,6 +3,7 @@ import { DivBotoesFormulario, DivFormulario } from "./Styled";
 import {useNavigate} from "react-router-dom"
 import { useRequestData } from "../../Hooks/UseRequestData";
 import axios from "axios";
+import { paises } from '../../MockDeDados/Paises'
 
 
 export const ApplicationFormPage=()=>{
@@ -30,14 +31,12 @@ export const ApplicationFormPage=()=>{
         axios.post(url, body).then((response)=>{
             setListaDeCandidato()
             alert("usuario cadastrado com sucesso")
+            console.log(formularioCandidato)
         })
         .catch(()=>{
             alert("usuario não cadastrado")
         })
-
     }
-
-    
 
     const navigate=useNavigate();
 
@@ -51,25 +50,54 @@ export const ApplicationFormPage=()=>{
             <h2>Carregando....</h2>
             :
             <>
-            <useRequestData/>
                 <h1>Inscreva-se para uma viagem</h1>
-                <form>
-                    <select>
-                        <option>Escolha uma viagem</option>
-                        {listaViagens.map((item, index)=> <option value={item.name} key={index}>{item.name}</option>)}                 
+                <form onSubmit={formularioCandidato}>
+                    <select required>
+                    <option value={""} type="Select">Selecione sua viagem</option>
+                        {listaViagens.map((item, index)=> <option value={item.name} key={index}>{item.name}</option>)}
                     </select>
-                    <input placeholder="Nome" value={nameInput}/>
-                    <input placeholder="Idade" value={idadeInput}/>
-                    <textarea placeholder="Texto de candidatura" value={textoInput}/>
-                    <input placeholder="Profissão" value={profissaoInput}/>
-                    <select>
-                        <option value={paisInput}>Selecione o seu país</option>
+                    <input 
+                    placeholder="Nome" 
+                    value={nameInput}
+                    type="name"
+                    pattern="^[A-Za-z].{3,}$"
+                    title="Mínimo de 4 letras."
+                    required
+                    />
+                    <input 
+                    placeholder="Idade" 
+                    value={idadeInput} 
+                    required
+                    type="number"
+                    min={18}
+
+                    />
+                    <textarea 
+                    placeholder="Texto de candidatura" 
+                    value={textoInput}
+                    required
+                    type="text"
+                    minLength={20}
+
+                    />
+                    <input placeholder="Profissão" 
+                    value={profissaoInput}
+                    type="text"
+                    required
+                    pattern="^[A-Za-z].{10,}$"
+                    title="Mínimo de 10 letras."
+        
+                    />
+                    <select required>
+                        <option value={""} type="Select">Selecione o seu país</option>
+                        {paises.map((item, index)=> <option value={item} key={index}>{item}</option>)}
+
                     </select>
+                    <DivBotoesFormulario>
+                        <button onClick={voltar}>Voltar</button>
+                        <button type="submit">Enviar</button>
+                    </DivBotoesFormulario>
                 </form>
-                <DivBotoesFormulario>
-                    <button onClick={voltar}>Voltar</button>
-                    <button onClick={formularioCandidato}>Enviar</button>
-                </DivBotoesFormulario>
             </>
 }
         </DivFormulario>

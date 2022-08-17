@@ -17,11 +17,17 @@ export const DivAdminHomePage=styled.div`
         color: #2d1687;
         font-weight: bold;
         padding-bottom: 1%;
+        @media (max-width: 650px){
+            padding-bottom: 5%;
+        }
     }
 `
 
 export const DivBotoesHomePage=styled.div`
     display: flex;
+    @media (max-width: 650px){
+        flex-direction: column;
+    }
     button{
         margin-left: 10px;
         width: 8vw;
@@ -33,6 +39,13 @@ export const DivBotoesHomePage=styled.div`
         font-weight: bold;
         color:#b9148e;
         cursor: pointer;
+        @media (max-width: 650px){
+            width: 50vw;
+            height: 5vh;
+            border-radius: 12px;
+            margin-bottom: 10px;
+            font-size: 23px;
+        }
 
         :hover{
             background-color: #b9148e;

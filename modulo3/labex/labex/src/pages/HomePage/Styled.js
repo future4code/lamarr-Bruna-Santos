@@ -10,6 +10,7 @@ export const DivBackground=styled.div`
     background-size: cover;
     align-items: center;
     justify-content: center;
+
 `
 
 export const DivHomePage=styled.div`
@@ -17,9 +18,11 @@ export const DivHomePage=styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 60%;
     height: 60%;
     opacity: 0.4;
+    @media (max-width: 650px){
+        padding-top: 30%;
+    }
     :hover{
         opacity: 1;
     }
@@ -37,8 +40,7 @@ export const DivBotoesHomePage=styled.div`
     flex-direction: row;
     button{
         margin-left: 10px;
-        width: 8vw;
-        height: 4vh;
+        min-width: 9vw;
         border-radius: 10px;
         border: 2px solid black;
         font-family: 'Rajdhani', sans-serif;

@@ -10,6 +10,10 @@ export const DivLoginPage=styled.div`
     flex-direction: column;
     background-image: url(${imagemBackgroundLogin});
     background-size: cover;
+    @media (max-width: 920px){
+        background-image: none;
+        background-color: #F3F4F4;
+    }
 
     h1{
         font-family: 'Rajdhani', sans-serif;
@@ -18,12 +22,20 @@ export const DivLoginPage=styled.div`
         padding-bottom: 1%
     }
 
+    form{
+        display: flex;
+        flex-direction: column;
+        width: 20%;
+        @media (max-width: 650px){
+            width: 80%;
+        }
+    }
+
     input{
         margin-bottom: 10px;
         border-radius: 5px;
         border: 2px solid #b9148e;
         height: 3vh;
-        width: 20%;
         outline: none;
         color: gray;
         font-size: 16px;
@@ -36,6 +48,9 @@ export const DivLoginPage=styled.div`
             padding: 5px;
             font-family: 'Rajdhani', sans-serif;
             font-size: 16px;
+            @media (max-width: 650px){
+            font-size: 18px;
+        }
         }
     }
 `
@@ -53,6 +68,10 @@ export const DivBotoesLoginPage=styled.div`
         font-weight: bold;
         color:#b9148e;
         cursor: pointer;
+        @media (max-width: 650px){
+            width: 40vw;
+            height: 5vh;
+        }
 
         :hover{
             background-color: #b9148e;

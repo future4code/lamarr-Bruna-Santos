@@ -18,12 +18,24 @@ export const LoginPage=()=>{
     return(
         <DivLoginPage>
             <h1>Login</h1>
-            <input placeholder="E-mail"/>
-            <input type="password" nome="senha"placeholder="Senha"/>
-            <DivBotoesLoginPage>
-                <button onClick={voltar}>Voltar</button>
-                <button onClick={areaDoAdmin}>Entrar</button>
-            </DivBotoesLoginPage>
+            <form onSubmit={areaDoAdmin}>
+                <input
+                placeholder="E-mail"
+                type="email"
+                required
+                />
+                <input 
+                placeholder="Senha"
+                type="password"
+                required
+                pattern="^.{6,}$" //padrão Regex
+                title="mínimo de 6 caracteres"
+                />
+                <DivBotoesLoginPage>
+                    <button onClick={voltar}>Voltar</button>
+                    <button type="submit">Entrar</button>
+                </DivBotoesLoginPage>
+            </form>
         </DivLoginPage>
     )
 }
