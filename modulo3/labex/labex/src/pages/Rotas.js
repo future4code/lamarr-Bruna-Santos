@@ -6,6 +6,7 @@ import { CreateTripPage } from "./CreateTripPage/CreateTripPage";
 import { HomePage } from "./HomePage/HomePage";
 import { LisTripsPage } from "./ListTrips/ListTripsPage";
 import { LoginPage } from "./LoginPage/LoginPage";
+import { TripDetailsPage } from "./TripDetailsPage/TripDetailsPage";
 
 export const Rotas=()=>{
     return(
@@ -17,7 +18,7 @@ export const Rotas=()=>{
                 <Route path="/login" element={<LoginPage/>}/>
                 <Route path="/admin/trips/list" element={<AdminHomePage/>}/>
                 <Route path="/admin/trips/create" element={<CreateTripPage/>}/>
-                <Route path="/admin/trips/list" element={<AdminHomePage/>}/>
+                <Route path="/admin/trips/:id" element={<TripDetailsPage/>}/>
             </Routes>
         </BrowserRouter>
     )

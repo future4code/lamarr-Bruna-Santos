@@ -1,9 +1,27 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { DivAdminHomePage, DivBotoesHomePage } from "./Styled";
 import {useNavigate} from "react-router-dom"
+import { useProtectedPage } from "../../Hooks/useProtectedPage";
+import axios from 'axios'
 
 
 export const AdminHomePage=()=>{
+    useProtectedPage()
+    useEffect(()=>{
+        const token = localStorage.getItem("token")
+
+        const urlCriarViagem="https://us-central1-labenu-apis.cloudfunctions.net/labeX/Bruna-carvalho-lamarr/trips"
+        const headers={
+            headers:{
+                Auth: token
+            }
+        }
+        axios.get(urlCriarViagem, headers).then((response)=>{
+            console.log(response.data)
+        }).catch((error)=>{
+            console.log("Deu erro:", error.response)
+        })
+    }, [])
     const navigate=useNavigate();
 
     const voltar=()=>{

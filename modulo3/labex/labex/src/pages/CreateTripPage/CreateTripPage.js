@@ -1,17 +1,35 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {useNavigate} from "react-router-dom"
 import { DivBotoesCriarViagem, DivCriarPaginas } from "./Styled";
 import { planetas } from '../../MockDeDados/Planetas'
+import { useProtectedPage } from "../../Hooks/useProtectedPage";
+import axios from 'axios'
 
 
 export const CreateTripPage=()=>{
+    useProtectedPage()
+    useEffect(()=>{
+        const token = localStorage.getItem("token")
+
+        const urlCriarViagem="https://us-central1-labenu-apis.cloudfunctions.net/labeX/Bruna-carvalho-lamarr/trips"
+        const headers={
+            headers:{
+                Auth: token
+            }
+        }
+        axios.get(urlCriarViagem, headers).then((response)=>{
+            console.log(response.data)
+        }).catch((error)=>{
+            console.log("Deu erro:", error.response)
+        })
+    }, [])
+
     const [nome, setNome]=useState()
     const [planeta, setPlaneta]=useState()
     const [data, setData]=useState()
     const [descricao, setDescricao]=useState()
     const [duracao, setDuracao]=useState()
 
-    const urlCriarViagem="https://us-central1-labenu-apis.cloudfunctions.net/labeX/Bruna-carvalho-lamarr/trips"
     const bodyCriarViagem={
         "name":{nome},
         "planet":{planeta},
@@ -19,6 +37,7 @@ export const CreateTripPage=()=>{
         "description":{descricao},
         "durationInDays":{duracao}
         }
+
     const navigate=useNavigate();
 
     const voltar=()=>{
