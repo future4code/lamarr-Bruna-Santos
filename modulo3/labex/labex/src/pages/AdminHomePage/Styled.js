@@ -39,6 +39,8 @@ export const DivBotoesHomePage=styled.div`
         font-weight: bold;
         color:#b9148e;
         cursor: pointer;
+        transition: .5s ease-in-out ;
+
         @media (max-width: 650px){
             width: 50vw;
             height: 5vh;

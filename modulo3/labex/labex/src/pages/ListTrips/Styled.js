@@ -91,6 +91,8 @@ export const BotoesHome=styled.div`
         color:#b9148e;
         padding: 10px 20px;
         cursor: pointer;
+        transition: .5s ease-in-out ;
+
 
         @media (max-width: 500px){
             padding: 5px 10px;

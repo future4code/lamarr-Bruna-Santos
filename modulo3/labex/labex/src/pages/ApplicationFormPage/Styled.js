@@ -122,6 +122,8 @@ export const DivBotoesFormulario=styled.div`
         font-weight: bold;
         color:#b9148e;
         cursor: pointer;
+        transition: .5s ease-in-out ;
+
 
         :hover{
             background-color: #b9148e;

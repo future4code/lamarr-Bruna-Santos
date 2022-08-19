@@ -18,7 +18,7 @@ export const LoginPage=()=>{
             localStorage.setItem("token", response.data.token)
             navigate("/admin/trips/list")
         }).
-        catch((error)=> console.log(formulario))
+        catch((error)=> alert("Usuário não autorizado"))
     }
 
     const voltar=()=>{
@@ -30,22 +30,23 @@ export const LoginPage=()=>{
             <h1>Login</h1>
             <form onSubmit={logar}>
                 <input
+                name="email"
                 placeholder="E-mail"
                 type="email"
                 required
                 value={formulario.email}
                 onChange={onChange}
                 />
+
                 <input 
+                name="password"
                 placeholder="Senha"
                 type="password"
                 required
                 pattern="^.{6,}$" //padrão Regex
                 title="mínimo de 6 caracteres"
                 onChange={onChange}
-                value={formulario.email}
-
-
+                value={formulario.password}
                 />
                 <DivBotoesLoginPage>
                     <button onClick={voltar}>Voltar</button>

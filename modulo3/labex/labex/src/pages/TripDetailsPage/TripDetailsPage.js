@@ -13,12 +13,14 @@ export const TripDetailsPage=()=>{
                 Auth: token
             }
         }
+
         axios.get(urlCriarViagem, headers).then((response)=>{
             console.log(response.data)
         }).catch((error)=>{
             console.log("Deu erro:", error.response)
         })
     }, [])
+
     return(
         <>
             <h2>Detalhes da viagem</h2>
