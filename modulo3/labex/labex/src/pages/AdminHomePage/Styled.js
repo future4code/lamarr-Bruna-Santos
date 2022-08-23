@@ -8,11 +8,21 @@ export const DivListaDeViagens=styled.div`
 
     button{
         font-family: 'Rajdhani', sans-serif;
-        width: 20%;
+        width: 15%;
         margin-bottom: 10px;
         font-size: 20px;
         cursor: pointer;
-        transition: .5s ease-in-out ;
+        transition: .5s ease-in ;
+        color: #2d1687;
+        background-color: white;
+        border-radius: 10px;
+        opacity: 0.6;
+        border: 2px solid #2d1687;
+        :hover{
+            color: white;
+            background-color: #2d1687;
+            opacity: 1;
+        }
 
     }
 `
@@ -28,7 +38,7 @@ export const DivAdminHomePage=styled.div`
     background-image: url(${imagemBackgroundPainelAdm});
     background-size: cover;
 
-    h1{
+    h1, h2{
         font-family: 'Rajdhani', sans-serif;
         color: #2d1687;
         font-weight: bold;

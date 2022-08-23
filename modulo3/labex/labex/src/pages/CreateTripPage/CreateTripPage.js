@@ -4,9 +4,12 @@ import { DivBotoesCriarViagem, DivCriarPaginas } from "./Styled";
 import { planetas } from '../../MockDeDados/Planetas'
 import { useProtectedPage } from "../../Hooks/useProtectedPage";
 import axios from 'axios'
+import { useRequestData } from "../../Hooks/UseRequestData";
 
 
 export const CreateTripPage=()=>{
+    const [listaViagens,isLoading] =useRequestData()
+
     useProtectedPage()
     useEffect(()=>{
         const token = localStorage.getItem("token")
@@ -47,47 +50,51 @@ export const CreateTripPage=()=>{
 
     return(
         <DivCriarPaginas>
-            <h1>CRIAR VIAGENS</h1>
-            <form>
-                <input 
-                placeholder="Nome"
-                type="name"
-                required
-                pattern="^[A-Za-z].{4,}$"
-                title="Mínimo de 5 letras."
-                />
-                <select required>
-                    <option type="Selection" value={""}>Escolha um planeta</option>
-                    {planetas.map((item, index)=> <option value={item} key={index}>{item}</option>)}
-                </select>
-                <input
-                placeholder="dd/mm/aaaa"
-                type="date"
-                required
-                pattern="[0-9]{2}/[0-9]{2}/[0-9]{4}"
-                title="A data informada precisa ser maior que a data atual"
-                />
-                <input 
-                placeholder="Descrição"
-                type="text"
-                required
-                pattern="^[A-Za-z].{29,}$"
-                title="Mínimo de 30 letras."
-                />
-                <input 
-                placeholder="Duração em dias"
-                type="number"
-                min="30"
-                required
-                
-                />
-                <DivBotoesCriarViagem>
-                    <button onClick={voltar}>Voltar</button>
-                    <button>Criar</button>
-                </DivBotoesCriarViagem>
-            </form>
-
-
+            {isLoading?
+            <h1>Carregando...</h1>
+            :
+            <>
+                <h1>CRIAR VIAGENS</h1>
+                <form>
+                    <input 
+                    placeholder="Nome"
+                    type="name"
+                    required
+                    pattern="^[A-Za-z].{4,}$"
+                    title="Mínimo de 5 letras."
+                    />
+                    <select required>
+                        <option type="Selection" value={""}>Escolha um planeta</option>
+                        {planetas.map((item, index)=> <option value={item} key={index}>{item}</option>)}
+                    </select>
+                    <input
+                    placeholder="dd/mm/aaaa"
+                    type="date"
+                    required
+                    pattern="[0-9]{2}/[0-9]{2}/[0-9]{4}"
+                    title="A data informada precisa ser maior que a data atual"
+                    />
+                    <input 
+                    placeholder="Descrição"
+                    type="text"
+                    required
+                    pattern="^[A-Za-z].{29,}$"
+                    title="Mínimo de 30 letras."
+                    />
+                    <input 
+                    placeholder="Duração em dias"
+                    type="number"
+                    min="30"
+                    required
+                    
+                    />
+                    <DivBotoesCriarViagem>
+                        <button onClick={voltar}>Voltar</button>
+                        <button>Criar</button>
+                    </DivBotoesCriarViagem>
+                </form>
+            </>
+            }
 
         </DivCriarPaginas>
     )
