@@ -7,7 +7,7 @@ export const DivHome=styled.div`
     flex-direction: column;
     max-width: 100vw;
     min-height: 100vh;
-    justify-content: flex-start ;
+    justify-content: center ;
     align-items: center;
     background-image: url(${imagemBackgroundViagens});
     background-size: cover;
@@ -34,7 +34,6 @@ export const DivHome=styled.div`
 
 export const DivListaViagens=styled.div`
     display: flex;
-    flex-wrap: wrap;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: flex-start;
@@ -42,8 +41,11 @@ export const DivListaViagens=styled.div`
     border-style: dashed;
     width: 20vw;
     min-height: 20vh;
-    margin-bottom: 10px;
+    margin: 0 5px 10px 5px;
     background-color: white;
+    flex: none;
+
+
     @media (max-width: 650px){
         min-width: 75vw;
         min-height: 35vh;
@@ -73,6 +75,13 @@ export const DivListaViagens=styled.div`
         text-align: justify;
         color: gray;
     }
+`
+
+export const DivCarrossel=styled.div`
+    display: flex;
+    max-width: 62vw;
+    overflow-x: scroll;
+
 `
 
 export const DivPlaneta=styled.div`

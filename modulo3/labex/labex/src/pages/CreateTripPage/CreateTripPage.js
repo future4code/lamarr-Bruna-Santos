@@ -17,7 +17,7 @@ export const CreateTripPage=()=>{
                 Auth: token
             }
         }
-        axios.get(urlCriarViagem, headers).then((response)=>{
+        axios.post(urlCriarViagem, headers, bodyCriarViagem).then((response)=>{
             console.log(response.data)
         }).catch((error)=>{
             console.log("Deu erro:", error.response)
@@ -65,7 +65,7 @@ export const CreateTripPage=()=>{
                 type="date"
                 required
                 pattern="[0-9]{2}/[0-9]{2}/[0-9]{4}"
-                title="Informe a data no modelo: dd/mm/aaaa"
+                title="A data informada precisa ser maior que a data atual"
                 />
                 <input 
                 placeholder="Descrição"

@@ -1,6 +1,22 @@
 import styled from "styled-components";
 import imagemBackgroundPainelAdm from '../img/background-paineladm.png'
 
+export const DivListaDeViagens=styled.div`
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+
+    button{
+        font-family: 'Rajdhani', sans-serif;
+        width: 20%;
+        margin-bottom: 10px;
+        font-size: 20px;
+        cursor: pointer;
+        transition: .5s ease-in-out ;
+
+    }
+`
+
 
 export const DivAdminHomePage=styled.div`
     display: flex;
@@ -30,6 +46,7 @@ export const DivBotoesHomePage=styled.div`
     }
     button{
         margin-left: 10px;
+        margin-bottom: 30px;
         width: 8vw;
         height: 4vh;
         border-radius: 10px;

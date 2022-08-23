@@ -1,7 +1,8 @@
 import React from "react";
-import { BotoesHome, DivHome, DivListaViagens } from "./Styled";
+import { BotoesCarrossel, BotoesHome, DivCarrossel, DivHome, DivListaViagens } from "./Styled";
 import {useNavigate} from "react-router-dom"
 import { useRequestData } from "../../Hooks/UseRequestData";
+
 
 export const LisTripsPage=()=>{
 
@@ -29,6 +30,7 @@ export const LisTripsPage=()=>{
         navigate("/trips/application")
     }
 
+
     return(
         <DivHome> 
             {isLoading? 
@@ -36,7 +38,9 @@ export const LisTripsPage=()=>{
             :
             <>
                 <h1>Lista de Viagens</h1>
-                {componentesLista}
+                <DivCarrossel>
+                    {componentesLista}
+                </DivCarrossel>
                 <BotoesHome>
                     <button onClick={voltar}>Voltar</button>
                     <button onClick={formulario}>Inscreva-se</button>
