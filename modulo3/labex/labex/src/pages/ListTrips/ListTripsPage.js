@@ -12,10 +12,10 @@ export const LisTripsPage=()=>{
         return(
             <DivListaViagens key={index}>
                 <h2>{item.name}</h2>
-                <p><strong>Planeta:</strong> {item.planet}</p>
+                <p><span>Planeta:</span> {item.planet}</p>
                 <p>{item.description}</p>
-                <p><strong>Duração em dias:</strong> {item.durationInDays}</p>
-                <p><strong>Data:</strong> {item.date}</p>
+                <p><span>Duração em dias:</span> {item.durationInDays}</p>
+                <p><span>Data:</span> {item.date}</p>
             </DivListaViagens>
         )
     })
@@ -26,7 +26,7 @@ export const LisTripsPage=()=>{
         navigate(-1)
     }
 
-    const formulario=()=>{
+    const formularioCandidato=()=>{
         navigate("/trips/application")
     }
 
@@ -43,7 +43,7 @@ export const LisTripsPage=()=>{
                 </DivCarrossel>
                 <BotoesHome>
                     <button onClick={voltar}>Voltar</button>
-                    <button onClick={formulario}>Inscreva-se</button>
+                    <button onClick={formularioCandidato}>Inscreva-se</button>
                 </BotoesHome>
             </>
 

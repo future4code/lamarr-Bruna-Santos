@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { DivBotoesFormulario, DivFormulario } from "./Styled";
-import {useNavigate} from "react-router-dom"
+import {useNavigate, useParams} from "react-router-dom"
 import { useRequestData } from "../../Hooks/UseRequestData";
 import axios from "axios";
 import { paises } from '../../MockDeDados/Paises'
@@ -14,11 +14,13 @@ export const ApplicationFormPage=()=>{
     const [profissaoInput, setProfissaoInput]=useState()
     const [paisInput, setPaisInput]=useState()
     const [nomeViagem, setNomeViagem]=useState()
+    const param=useParams()
+
 
     const [listaViagens, isLoading]=useRequestData()
 
 
-    const url='https://us-central1-labenu-apis.cloudfunctions.net/labeX/Bruna-carvalho-lamarr/trips/1AkvKy7K8omPZqRn9EHS/apply'
+    const urlFormulario=`https://us-central1-labenu-apis.cloudfunctions.net/labeX/Bruna-carvalho-lamarr/trips/${param.id}/apply`
     const body={
         "name":{nameInput},
         "age": {idadeInput},
@@ -27,8 +29,8 @@ export const ApplicationFormPage=()=>{
         "country":{paisInput}
     }
 
-    const formularioCandidato=()=>{
-        axios.post(url, body).then((response)=>{
+    const formularioCandidato=(event)=>{
+        axios.post(urlFormulario, body).then((response)=>{
             setListaDeCandidato()
             alert("usuario cadastrado com sucesso")
             console.log(formularioCandidato)

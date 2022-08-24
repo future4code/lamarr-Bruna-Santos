@@ -75,6 +75,10 @@ export const DivListaViagens=styled.div`
         text-align: justify;
         color: gray;
     }
+    
+    span{
+        font-weight: bolder;
+    }
 `
 
 export const DivCarrossel=styled.div`
@@ -83,17 +87,13 @@ export const DivCarrossel=styled.div`
     overflow-x: scroll;
 
 `
-
-export const DivPlaneta=styled.div`
-    display: flex;
-`
 export const BotoesHome=styled.div`
     display: flex;
     button{
-        margin-left: 10px;
+        margin: 10px 5px 0 5px;
         min-width: 8vw;
         border-radius: 10px;
-        border: 2px solid black;
+        border: 2px solid #2d1687;
         font-family: 'Rajdhani', sans-serif;
         font-size: 20px;
         font-weight: bold;
