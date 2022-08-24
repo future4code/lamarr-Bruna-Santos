@@ -17,8 +17,10 @@ export const LoginPage=()=>{
         .then((response)=>{
             localStorage.setItem("token", response.data.token)
             navigate("/admin/trips/list")
-        }).
-        catch((error)=> alert("Usuário não autorizado"))
+        }).catch((error)=>{
+            alert("Usuário não localizado")
+        }).finally(()=>{
+        })
     }
 
     const voltar=()=>{

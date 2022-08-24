@@ -6,6 +6,7 @@ import { CreateTripPage } from "./CreateTripPage/CreateTripPage";
 import { HomePage } from "./HomePage/HomePage";
 import { LisTripsPage } from "./ListTrips/ListTripsPage";
 import { LoginPage } from "./LoginPage/LoginPage";
+import { PageError } from "./PageError/Error";
 import { TripDetailsPage } from "./TripDetailsPage/TripDetailsPage";
 
 export const Rotas=()=>{
@@ -19,6 +20,7 @@ export const Rotas=()=>{
                 <Route path="/admin/trips/list" element={<AdminHomePage/>}/>
                 <Route path="/admin/trips/create" element={<CreateTripPage/>}/>
                 <Route path="/admin/trips/:id" element={<TripDetailsPage/>}/>
+                <Route path="*" element={<PageError/>}/>
             </Routes>
         </BrowserRouter>
     )

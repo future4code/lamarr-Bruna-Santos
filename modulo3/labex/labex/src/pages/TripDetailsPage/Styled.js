@@ -26,8 +26,39 @@ export const DivListaDeViagens=styled.div`
         font-weight: bold;
         text-align: center; 
     }
+
+    button{
+        min-width: 8vw;
+        border-radius: 10px;
+        border: 2px solid black;
+        margin: 20px 0;
+        font-family: 'Rajdhani', sans-serif;
+        font-size: 20px;
+        font-weight: bold;
+        color:#b9148e;
+        padding: 3px 10px;
+        cursor: pointer;
+        transition: .5s ease-in-out ;
+        @media (max-width: 650px){
+            width: 40vw;
+            height: 5vh;
+        }
+
+        :hover{
+            background-color: #b9148e;
+            color: white;
+            border: #b9148e;
+        }
+    }
 `
 
+export const NomeAprovados=styled.div`
+    font-family: 'Figtree', sans-serif;
+    text-align: justify;
+    color: gray;
+    font-size: 18px;
+
+`
 
 export const DivDetalhesFesta=styled.div`
     display: flex;
