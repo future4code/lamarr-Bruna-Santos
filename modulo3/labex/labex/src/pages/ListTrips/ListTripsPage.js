@@ -1,5 +1,5 @@
 import React from "react";
-import { BotoesCarrossel, BotoesHome, DivCarrossel, DivHome, DivListaViagens } from "./Styled";
+import { BotoesHome, DivCarrossel, DivHome, DivListaViagens } from "./Styled";
 import {useNavigate} from "react-router-dom"
 import { useRequestData } from "../../Hooks/UseRequestData";
 

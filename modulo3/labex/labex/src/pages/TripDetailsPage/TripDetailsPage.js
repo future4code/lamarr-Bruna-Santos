@@ -7,8 +7,42 @@ export const TripDetailsPage=()=>{
     const [trip, setTrip] = useState()
     const param=useParams()
     const [isLoading, setIsLoading]=useState(false)
-    
+    const [AprovarCandidatos, setAprovarCandidatos]=useState(true)
+    const [RejeitarCandidatos, setRejeitarCandidatos]=useState(false)
+
     const candidatos=trip?.candidates.map((item, index)=>{
+        const token = localStorage.getItem("token")
+
+        const urlDecideCandidato=`https://us-central1-labenu-apis.cloudfunctions.net/labeX/Bruna-carvalho-lamarr/trips/${param.id}/candidates/${item.id}/decide`
+        const headers={
+            headers:{
+                auth: token
+            }
+        }
+
+        const body={
+            "approve": AprovarCandidatos
+        }
+        
+        const bodyRejeitar={
+            "approve":RejeitarCandidatos
+        }
+
+        const aprovar=(event)=>{
+            axios.put(urlDecideCandidato, body, headers).then((response)=>{
+                console.log("Deu certo")
+        }).catch((error)=>{
+            console.log("Deu errado")
+        })
+    }
+
+        const rejeitar=(event)=>{
+            axios.put(urlDecideCandidato, bodyRejeitar, headers).then((response)=>{
+                console.log("Deu certo")
+        }).catch((error)=>{
+            console.log("Deu errado")
+        })
+    }
         return(
             <DivDetalhesCandidatos key={index}>
                 <p><span>Nome:</span> {item.name}</p>
@@ -17,12 +51,21 @@ export const TripDetailsPage=()=>{
                 <p><span>País:</span> {item.country}</p>
                 <p><span>Descrição:</span> {item.applicationText}</p>
                 <DivBotoesCandidato>
-                    <button>Aprovar</button>
-                    <button>Rejeitar</button>
+                    <button onClick={aprovar}>Aprovar</button>
+                    <button onClick={rejeitar}>Rejeitar</button>
                 </DivBotoesCandidato>
             </DivDetalhesCandidatos>
         )
     })
+     const aprovados=trip?.approved.map((item, index)=>{
+        return(
+            <div key={index}>
+            <p>{item.name}</p>
+            </div>
+        )
+    }) 
+
+    
 
     /* useProtectedPage() */
     useEffect(()=>{
@@ -45,6 +88,7 @@ export const TripDetailsPage=()=>{
         })
     }, [])
 
+
     return(
         <DivListaDeViagens>
             {isLoading? 
@@ -60,7 +104,9 @@ export const TripDetailsPage=()=>{
                     <p><strong>Data:</strong> {trip.date}</p>
                 </DivDetalhesFesta>}
                 <h2>Candidatos</h2>
-                {candidatos}
+                {candidatos}    
+                <h2>Aprovados</h2>
+                {aprovados}
             </>
             }      
         </DivListaDeViagens>
