@@ -86,10 +86,13 @@ export const DivCriarPaginas=styled.div`
 export const DivBotoesCriarViagem=styled.div`
     display: flex;
     justify-content: center;
-    button{
+    button, div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
         margin: 0 2px;
         width: 10vw;
-        height: 4vh;
+        min-height: 4vh;
         border-radius: 10px;
         border: 2px solid black;
         font-family: 'Rajdhani', sans-serif;

@@ -11,9 +11,6 @@ export const ApplicationFormPage=()=>{
     const [formulario, onChange] = useForm({name: "", age: "", applicationText:"", profession:"", country:"", planet:""})
 
     const [listaDeCandidato, setListaDeCandidato]=useState([])
-    const param=useParams()
-
-
     const [listaViagens, isLoading]=useRequestData()
 
 

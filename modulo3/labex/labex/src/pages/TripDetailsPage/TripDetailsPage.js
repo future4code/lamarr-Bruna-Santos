@@ -2,8 +2,15 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useNavigate, useParams } from "react-router-dom";
 import { DivBotoesCandidato, DivDetalhesCandidatos, DivDetalhesFesta, DivListaDeViagens, NomeAprovados } from "./Styled";
+import { useProtectedPage } from "../../Hooks/useProtectedPage";
 
 export const TripDetailsPage=()=>{
+    useProtectedPage()
+    useEffect(()=>{
+        setIsLoading(true)
+        requisicaoGet()
+
+    }, [])
 
     function requisicaoGet(){
     //6: Renderizar os detalhes das viagens 
@@ -99,11 +106,7 @@ export const TripDetailsPage=()=>{
     }) 
 
     /* useProtectedPage() */
-    useEffect(()=>{
-        setIsLoading(true)
-        requisicaoGet()
 
-    }, [])
 
     return(
         <DivListaDeViagens>

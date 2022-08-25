@@ -5,9 +5,12 @@ import { planetas } from '../../MockDeDados/Planetas'
 import { useProtectedPage } from "../../Hooks/useProtectedPage";
 import axios from 'axios'
 import { useForm } from "../../Hooks/UseForm";
+import { useRequestData } from "../../Hooks/UseRequestData";
 
 
 export const CreateTripPage=()=>{
+    const [listaViagens, isLoading]=useRequestData()
+
 
     useProtectedPage()
     const [formulario, onChange] = useForm({name: "", planet: "", date:"", description:"", durationInDays:""})
@@ -27,6 +30,7 @@ export const CreateTripPage=()=>{
             alert("Viagem criada com sucesso")
         }).catch((error)=>{
             alert("Essa viagem não pode ser criada")
+        }).finally(()=>{
         })
     }
 
@@ -40,6 +44,10 @@ export const CreateTripPage=()=>{
 
     return(
         <DivCriarPaginas>
+            {isLoading?
+            <h1>Carregando....</h1>
+            :
+            <>
                 <h1>CRIAR VIAGENS</h1>
                 <form onSubmit={novaViagem}>
                     <input 
@@ -88,10 +96,12 @@ export const CreateTripPage=()=>{
                     
                     />
                     <DivBotoesCriarViagem>
-                        <button onClick={voltar}>Voltar</button>
+                        <div onClick={voltar}>Voltar</div>
                         <button type="Submit">Enviar</button>
                     </DivBotoesCriarViagem>
                 </form>
+                </>
+            }
 
         </DivCriarPaginas>
     )

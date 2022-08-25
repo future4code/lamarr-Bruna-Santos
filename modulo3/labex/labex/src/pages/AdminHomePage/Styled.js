@@ -6,9 +6,10 @@ export const DivListaDeViagens=styled.div`
     width: 100vw;
     justify-content: center;
 
-    button{
+    button:nth-child(1){
         font-family: 'Rajdhani', sans-serif;
         width: 15%;
+        min-height: 5%;
         margin-bottom: 10px;
         font-size: 20px;
         cursor: pointer;
@@ -23,7 +24,25 @@ export const DivListaDeViagens=styled.div`
             background-color: #2d1687;
             opacity: 1;
         }
-
+        @media (max-width: 752px){
+            min-width: 50%;
+        }
+    }
+    button:nth-child(2){
+        font-family: 'Rajdhani', sans-serif;
+        width: 2%;
+        margin-bottom: 10px;
+        font-size: 20px;
+        cursor: pointer;
+        transition: .5s ease-in ;
+        color: #2d1687;
+        opacity: 0.6;
+        border: none;
+        background-color: transparent;
+        :hover{
+            color: #d13434;
+            opacity: 1;
+        }
     }
 `
 
@@ -33,7 +52,7 @@ export const DivAdminHomePage=styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     width: 100vw;
     background-image: url(${imagemBackgroundPainelAdm});
     background-size: cover;
@@ -58,7 +77,7 @@ export const DivBotoesHomePage=styled.div`
         margin-left: 10px;
         margin-bottom: 30px;
         width: 8vw;
-        height: 4vh;
+        min-height: 4vh;
         border-radius: 10px;
         border: 2px solid black;
         font-family: 'Rajdhani', sans-serif;
@@ -74,6 +93,9 @@ export const DivBotoesHomePage=styled.div`
             border-radius: 12px;
             margin-bottom: 10px;
             font-size: 23px;
+        }
+        @media (max-width: 222px){
+            width: 60vw;
         }
 
         :hover{
