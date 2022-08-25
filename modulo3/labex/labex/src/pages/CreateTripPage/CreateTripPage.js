@@ -24,9 +24,9 @@ export const CreateTripPage=()=>{
         
         axios.post("https://us-central1-labenu-apis.cloudfunctions.net/labeX/Bruna-carvalho-lamarr/trips",formulario, headers)
         .then((response)=>{
-            console.log(response)
+            alert("Viagem criada com sucesso")
         }).catch((error)=>{
-            console.log("Deu errado")
+            alert("Essa viagem não pode ser criada")
         })
     }
 

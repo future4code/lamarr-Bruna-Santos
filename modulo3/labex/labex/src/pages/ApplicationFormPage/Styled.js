@@ -85,7 +85,7 @@ export const DivFormulario=styled.div`
 
         select{
             margin-bottom: 10px;
-            width: 20vw;
+            width: 22vw;
             height: 3.5vh;
             border-radius: 5px;
             border: 2px solid #b9148e;
@@ -111,12 +111,15 @@ export const DivFormulario=styled.div`
 export const DivBotoesFormulario=styled.div`
     display: flex;
 
-    button{
+    button, div{
+        display: flex;
+        align-items: center;
+        justify-content: center;
         margin-left: 5px;
-        width: 10vw;
-        height: 4vh;
+        width: 10.5vw;
+        min-height: 4vh;
         border-radius: 10px;
-        border: 2px solid black;
+        border: 2px solid gray;
         font-family: 'Rajdhani', sans-serif;
         font-size: 20px;
         font-weight: bold;
@@ -135,5 +138,7 @@ export const DivBotoesFormulario=styled.div`
             min-width: 38vw;
             min-height: 4.5vh;
         }
+
+
     }
 `

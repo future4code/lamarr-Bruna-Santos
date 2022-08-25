@@ -27,6 +27,15 @@ export const DivListaDeViagens=styled.div`
         text-align: center; 
     }
 
+    p{
+        font-family: 'Figtree', sans-serif;
+        text-align: justify;
+        color: gray;
+        padding: 0 5% 1% 5%;
+        font-size: 18px;
+
+    }
+
     button{
         min-width: 8vw;
         border-radius: 10px;
@@ -53,10 +62,15 @@ export const DivListaDeViagens=styled.div`
 `
 
 export const NomeAprovados=styled.div`
+    display: flex;
+    flex-direction: column;
     font-family: 'Figtree', sans-serif;
     text-align: justify;
+    justify-content: baseline;
     color: gray;
     font-size: 18px;
+    width: 20%;
+    padding-left: 12%;
 
 `
 
@@ -84,6 +98,8 @@ export const DivDetalhesFesta=styled.div`
         text-align: justify;
         color: gray;
         padding: 0 5% 1% 5%;
+        font-size: 18px;
+
     }
 `
 

@@ -94,7 +94,7 @@ export const TripDetailsPage=()=>{
     //5: Criação de um novo map para filtrar o nome dos usuários aprovados
      const aprovados=trip?.approved.map((item, index)=>{
         return(
-            <p key={index}>{item.name}</p>
+            <p key={index}>- {item.name}</p>
         )
     }) 
 
@@ -123,7 +123,7 @@ export const TripDetailsPage=()=>{
                 {candidatos?.length > 0 ?
                 candidatos
                 :
-                <p>Nenhum candidato</p>
+                <p>Nenhum candidato detectado para essa viagem.</p>
                 }    
                 {aprovados?.length > 0 &&
                 <>
