@@ -9,6 +9,9 @@ import { LoginPage } from "./LoginPage/LoginPage";
 import { PageError } from "./PageError/Error";
 import { TripDetailsPage } from "./TripDetailsPage/TripDetailsPage";
 
+import { ToastContainer } from "react-toastify";
+
+
 export const Rotas=()=>{
     return(
         <BrowserRouter>

@@ -8,6 +8,9 @@ import { BiTrash } from 'react-icons/bi'
 import { Modal } from "./Modal/Modal"
 import { CircularProgress } from "@mui/material";
 import { DivCarregando } from "../LoginPage/Styled";
+import { toast } from "react-toastify";
+
+
 
 
 export const AdminHomePage=()=>{
@@ -34,17 +37,28 @@ export const AdminHomePage=()=>{
         )
 
     })
-        const token = localStorage.getItem("token")
-        const headers ={
-            headers:{
-                Auth: token
-            }
+    const token = localStorage.getItem("token")
+    const headers ={
+        headers:{
+            Auth: token
         }
+    }
+
     const deletarViagem=(id)=>{
         console.log("Oies")
         const urlDelete=`https://us-central1-labenu-apis.cloudfunctions.net/labeX/Bruna-carvalho-lamarr/trips/${id}`
 
-        axios.delete(urlDelete, headers)
+        axios.delete(urlDelete, headers).then((response)=>{
+            toast('🚫 Viagem deletada com sucesso!', {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            }); 
+        })
     }
 
     const voltar=()=>{

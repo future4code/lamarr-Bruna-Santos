@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import imagemBackgroundFormulario from '../img/background-formulario.png'
 
-
 export const DivFormulario=styled.div`
     width: 100vw;
     height: 100vh;
@@ -61,8 +60,7 @@ export const DivFormulario=styled.div`
             @media (max-width: 650px){
                 font-size: 18px;
         }
-        }
-        
+        } 
     }
 
     textarea{
@@ -80,7 +78,6 @@ export const DivFormulario=styled.div`
         :focus {
                 color: #2d1687;
             }
-
     }
 
         select{
@@ -102,12 +99,10 @@ export const DivFormulario=styled.div`
                 min-height: 5vh;
                 font-size: 18px;
         }
-
         }
     }
 
 `
-
 export const DivBotoesFormulario=styled.div`
     display: flex;
 
@@ -126,8 +121,6 @@ export const DivBotoesFormulario=styled.div`
         color:#b9148e;
         cursor: pointer;
         transition: .5s ease-in-out ;
-
-
         :hover{
             background-color: #b9148e;
             color: white;
@@ -138,7 +131,5 @@ export const DivBotoesFormulario=styled.div`
             min-width: 38vw;
             min-height: 4.5vh;
         }
-
-
-    }
+        }
 `

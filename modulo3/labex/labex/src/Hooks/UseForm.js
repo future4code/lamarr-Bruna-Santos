@@ -9,5 +9,9 @@ export const useForm=(estadoInicial)=>{
 
     }
 
-    return [formulario, onChange]
+    const limpar=()=>{
+        setFormulario(estadoInicial)
+    }
+
+    return [formulario, onChange, limpar]
 }

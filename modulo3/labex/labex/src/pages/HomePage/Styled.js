@@ -2,7 +2,6 @@ import styled from "styled-components";
 import imagemBackgroundOpacity from '../img/background-opacity.png'
 import imagemBackgroundOpacityResponsivo from '../img/background-opacity-responsivo.png'
 
-
 export const DivBackground=styled.div`
     display: flex;
     width: 100vw;
@@ -15,9 +14,7 @@ export const DivBackground=styled.div`
         background-image: url(${imagemBackgroundOpacityResponsivo});
         background-size: cover; 
     }
-
 `
-
 export const DivHomePage=styled.div`
     display: flex;
     flex-direction: column;
@@ -34,8 +31,7 @@ export const DivHomePage=styled.div`
     h1{
         color: white;
         font-size: 50px;
-        font-family: 'Rajdhani', sans-serif;
-        
+        font-family: 'Rajdhani', sans-serif;     
     }
    
 `

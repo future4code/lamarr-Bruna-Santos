@@ -7,14 +7,14 @@ import axios from 'axios'
 import { useForm } from "../../Hooks/UseForm";
 import { CircularProgress } from "@mui/material";
 import { DivCarregando } from "../LoginPage/Styled";
-
+import { toast } from "react-toastify";
 
 
 export const CreateTripPage=()=>{
     const [isLoading, setIsLoading]=useState(false)
 
     useProtectedPage()
-    const [formulario, onChange] = useForm({name: "", planet: "", date:"", description:"", durationInDays:""})
+    const [formulario, onChange, limpar] = useForm({name: "", planet: "", date:"", description:"", durationInDays:""})
 
     const novaViagem=(event)=>{
         setIsLoading(true)
@@ -28,10 +28,27 @@ export const CreateTripPage=()=>{
         
         axios.post("https://us-central1-labenu-apis.cloudfunctions.net/labeX/Bruna-carvalho-lamarr/trips",formulario, headers)
         .then((response)=>{
-            alert("Viagem criada com sucesso")
-        }).catch((error)=>{
-            alert("Essa viagem não pode ser criada")
-        }).finally(()=>{
+            toast('🛸 Viagem cadastrada com sucesso!', {
+                position: "top-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                }); 
+        }).catch((error)=>{  
+            toast.error('Não foi possível cadastrar essa viagem', {
+                position: "top-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                });      
+            }).finally(()=>{
+                limpar()
             setIsLoading(false)
         })
     }
@@ -42,7 +59,6 @@ export const CreateTripPage=()=>{
     const voltar=()=>{
         navigate(-1)
     }
-
 
     return(
         <DivCriarPaginas>
@@ -104,6 +120,7 @@ export const CreateTripPage=()=>{
                     <DivBotoesCriarViagem>
                         <div onClick={voltar}>Voltar</div>
                         <button type="Submit">Enviar</button>
+                        
                     </DivBotoesCriarViagem>
                 </form>
                 </>

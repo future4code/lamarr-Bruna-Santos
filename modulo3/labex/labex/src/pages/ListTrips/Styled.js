@@ -44,7 +44,11 @@ export const DivListaViagens=styled.div`
     margin: 0 5px 10px 5px;
     background-color: white;
     flex: none;
-
+/*     :hover{
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+        opacity: 1;
+    } */
 
     @media (max-width: 650px){
         min-width: 75vw;
@@ -74,6 +78,7 @@ export const DivListaViagens=styled.div`
         padding: 1% 2%;
         text-align: justify;
         color: gray;
+
     }
     
     span{
@@ -85,6 +90,7 @@ export const DivCarrossel=styled.div`
     display: flex;
     max-width: 62vw;
     overflow-x: scroll;
+
 
 `
 export const BotoesHome=styled.div`
@@ -101,7 +107,6 @@ export const BotoesHome=styled.div`
         padding: 10px 20px;
         cursor: pointer;
         transition: .5s ease-in-out ;
-
 
         @media (max-width: 500px){
             padding: 5px 10px;

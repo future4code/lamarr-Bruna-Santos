@@ -4,6 +4,8 @@ import {useNavigate} from "react-router-dom"
 import { useForm } from "../../Hooks/UseForm";
 import axios from "axios"
 import { CircularProgress } from "@mui/material";
+import { toast } from "react-toastify";
+
 
 export const LoginPage=()=>{
     const navigate=useNavigate();
@@ -22,7 +24,15 @@ export const LoginPage=()=>{
             localStorage.setItem("token", response.data.token)
             navigate("/admin/trips/list")
         }).catch((error)=>{
-            alert("Usuário não localizado")
+            toast.error('Usuário sem permissão.', {
+                position: "top-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                });
         }).finally(()=>{
             setIsLoading(false)
         })

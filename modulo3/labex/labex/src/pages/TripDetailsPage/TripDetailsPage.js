@@ -5,6 +5,8 @@ import { DivBotoesCandidato, DivDetalhesCandidatos, DivDetalhesFesta, DivListaDe
 import { useProtectedPage } from "../../Hooks/useProtectedPage";
 import { CircularProgress } from "@mui/material";
 import { DivCarregando } from "../LoginPage/Styled";
+import { toast } from "react-toastify";
+
 
 
 export const TripDetailsPage=()=>{
@@ -68,6 +70,15 @@ export const TripDetailsPage=()=>{
         const aprovar=(event)=>{
             axios.put(urlDecideCandidato, body, headers).then((response)=>{
                 requisicaoGet()
+                toast('🚀 Candidato aprovado!', {
+                    position: "top-right",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    }); 
         }).catch((error)=>{
             console.log("Deu errado")
         })
@@ -81,6 +92,15 @@ export const TripDetailsPage=()=>{
         const rejeitar=(event)=>{
             axios.put(urlDecideCandidato, bodyRejeitar, headers).then((response)=>{
                 requisicaoGet()
+                toast('🚫 Usuário rejeitado!', {
+                    position: "top-right",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    }); 
         }).catch((error)=>{
             console.log("Deu errado")
         })
@@ -146,3 +166,4 @@ export const TripDetailsPage=()=>{
         </DivListaDeViagens>
     )
 }
+

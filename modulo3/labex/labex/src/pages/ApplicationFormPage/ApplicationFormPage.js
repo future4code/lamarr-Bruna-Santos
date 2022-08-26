@@ -7,11 +7,12 @@ import { paises } from '../../MockDeDados/Paises'
 import { useForm } from "../../Hooks/UseForm";
 import { DivCarregando } from "../LoginPage/Styled";
 import { CircularProgress } from "@mui/material";
+import { toast } from "react-toastify";
 
 
 
 export const ApplicationFormPage=()=>{
-    const [formulario, onChange] = useForm({name: "", age: "", applicationText:"", profession:"", country:"", planet:""})
+    const [formulario, onChange, limpar] = useForm({name: "", age: "", applicationText:"", profession:"", country:"", planet:""})
 
     const [listaDeCandidato, setListaDeCandidato]=useState([])
     const [listaViagens, isLoading]=useRequestData()
@@ -24,11 +25,28 @@ export const ApplicationFormPage=()=>{
         const urlFormulario=`https://us-central1-labenu-apis.cloudfunctions.net/labeX/Bruna-carvalho-lamarr/trips/${formulario.planet}/apply`
         axios.post(urlFormulario, formulario).then((response)=>{
             setListaDeCandidato()
-            alert("usuario cadastrado com sucesso")
-            console.log(formulario)
+            toast('👽 Inscrição realizada com sucesso!', {
+                position: "top-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                }); 
         })
         .catch(()=>{
-            alert("usuario não cadastrado")
+            toast.error('Não foi possivel realizar sua inscrição', {
+                position: "top-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                });
+        }).finally(()=>{
+            limpar()
         })
     }
 

@@ -4,14 +4,16 @@ import {useNavigate} from "react-router-dom"
 import { useRequestData } from "../../Hooks/UseRequestData";
 import { CircularProgress } from "@mui/material";
 import { DivCarregando } from "../LoginPage/Styled";
+import { Carousel } from 'antd';
 
 
 export const LisTripsPage=()=>{
+
     const [listaViagens,isLoading] =useRequestData()
 
     const componentesLista=listaViagens.map((item, index)=>{
         return(
-            <DivListaViagens key={index}>
+            <DivListaViagens  key={index}>
                 <h2>{item.name}</h2>
                 <p><span>Planeta:</span> {item.planet}</p>
                 <p>{item.description}</p>
