@@ -23,7 +23,7 @@ export const ApplicationFormPage=()=>{
         event.preventDefault()
         console.log(formulario)
         const urlFormulario=`https://us-central1-labenu-apis.cloudfunctions.net/labeX/Bruna-carvalho-lamarr/trips/${formulario.planet}/apply`
-        axios.post(urlFormulario, formulario).then((response)=>{
+        axios.post(urlFormulario, formulario ).then((response)=>{
             setListaDeCandidato()
             toast('👽 Inscrição realizada com sucesso!', {
                 position: "top-right",
@@ -34,19 +34,6 @@ export const ApplicationFormPage=()=>{
                 draggable: true,
                 progress: undefined,
                 }); 
-        })
-        .catch(()=>{
-            toast.error('Não foi possivel realizar sua inscrição', {
-                position: "top-right",
-                autoClose: 5000,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
-                });
-        }).finally(()=>{
-            limpar()
         })
     }
 

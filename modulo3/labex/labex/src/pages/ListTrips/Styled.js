@@ -86,13 +86,14 @@ export const DivListaViagens=styled.div`
     }
 `
 
-export const DivCarrossel=styled.div`
+    export const DivCarrossel=styled.div`
     display: flex;
     max-width: 62vw;
     overflow-x: scroll;
+    `
 
 
-`
+
 export const BotoesHome=styled.div`
     display: flex;
     button{

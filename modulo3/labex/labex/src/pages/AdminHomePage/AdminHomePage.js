@@ -10,9 +10,6 @@ import { CircularProgress } from "@mui/material";
 import { DivCarregando } from "../LoginPage/Styled";
 import { toast } from "react-toastify";
 
-
-
-
 export const AdminHomePage=()=>{
     useProtectedPage()
     const [listaViagens,isLoading] =useRequestData()
@@ -45,9 +42,7 @@ export const AdminHomePage=()=>{
     }
 
     const deletarViagem=(id)=>{
-        console.log("Oies")
         const urlDelete=`https://us-central1-labenu-apis.cloudfunctions.net/labeX/Bruna-carvalho-lamarr/trips/${id}`
-
         axios.delete(urlDelete, headers).then((response)=>{
             toast('🚫 Viagem deletada com sucesso!', {
             position: "top-right",
@@ -57,7 +52,7 @@ export const AdminHomePage=()=>{
             pauseOnHover: true,
             draggable: true,
             progress: undefined,
-            }); 
+            });
         })
     }
 
@@ -100,6 +95,7 @@ export const AdminHomePage=()=>{
             <Modal tripId={tripId} onClose={()=> setIsModalVisible(false)} deletarViagem={deletarViagem}>
             </Modal>
             )}
+
         </DivAdminHomePage>
     )
 }
