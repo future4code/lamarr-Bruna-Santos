@@ -3,6 +3,9 @@ import axios from "axios";
 import { useNavigate, useParams } from "react-router-dom";
 import { DivBotoesCandidato, DivDetalhesCandidatos, DivDetalhesFesta, DivListaDeViagens, NomeAprovados } from "./Styled";
 import { useProtectedPage } from "../../Hooks/useProtectedPage";
+import { CircularProgress } from "@mui/material";
+import { DivCarregando } from "../LoginPage/Styled";
+
 
 export const TripDetailsPage=()=>{
     useProtectedPage()
@@ -111,8 +114,11 @@ export const TripDetailsPage=()=>{
     return(
         <DivListaDeViagens>
             {isLoading? 
-            <h1>Carregando...</h1>
-            :
+            <DivCarregando>
+                <CircularProgress />
+                <CircularProgress />
+                <CircularProgress />
+            </DivCarregando>              :
             <>
                 <h1>Detalhes da viagem</h1>
                 {trip && <DivDetalhesFesta>

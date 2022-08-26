@@ -1,17 +1,18 @@
 import React, { useState } from "react";
-import { DivBotoesLoginPage, DivLoginPage } from "./Styled";
+import { DivBotoesLoginPage, DivCarregando, DivLoginPage } from "./Styled";
 import {useNavigate} from "react-router-dom"
 import { useForm } from "../../Hooks/UseForm";
 import axios from "axios"
-import { useRequestData } from "../../Hooks/UseRequestData";
+import { CircularProgress } from "@mui/material";
 
 export const LoginPage=()=>{
     const navigate=useNavigate();
 
     const [formulario, onChange] = useForm({email: "", password: "" })
-    const [listaViagens, isLoading]=useRequestData()
+    const [isLoading, setIsLoading]=useState(false)
 
     const logar =(event)=>{
+        setIsLoading(true)
         event.preventDefault()
         
 
@@ -23,6 +24,7 @@ export const LoginPage=()=>{
         }).catch((error)=>{
             alert("Usuário não localizado")
         }).finally(()=>{
+            setIsLoading(false)
         })
     }
 
@@ -32,9 +34,13 @@ export const LoginPage=()=>{
 
     return(
         <DivLoginPage>
-            {isLoading? 
-            <h1>Carregando...</h1>
-            :
+            {isLoading?
+            <DivCarregando>
+                <CircularProgress />
+                <CircularProgress />
+                <CircularProgress />
+            </DivCarregando>
+           :
             <>
                 <h1>Login</h1>
                 <form onSubmit={logar}>

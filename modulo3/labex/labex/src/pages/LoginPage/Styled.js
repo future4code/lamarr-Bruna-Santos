@@ -55,6 +55,34 @@ export const DivLoginPage=styled.div`
     }
 `
 
+export const DivCarregando=styled.div`
+    display: flex;
+
+
+    .css-18lrjg1-MuiCircularProgress-root{
+        :nth-child(1){
+        color: blueviolet;
+        padding: 0 5px;
+        opacity: 0.2;
+    }
+
+    :nth-child(2){
+        color: blueviolet;
+        padding: 0 5px;
+        opacity: 0.5;
+
+    }
+
+    :nth-child(3){
+        color: blueviolet;
+        padding: 0 5px;
+
+    }
+    }
+
+`
+
+
 export const DivBotoesLoginPage=styled.div`
     display: flex;
     button{

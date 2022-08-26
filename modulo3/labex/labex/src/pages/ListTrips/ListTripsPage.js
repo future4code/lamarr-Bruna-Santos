@@ -2,10 +2,11 @@ import React from "react";
 import { BotoesHome, DivCarrossel, DivHome, DivListaViagens } from "./Styled";
 import {useNavigate} from "react-router-dom"
 import { useRequestData } from "../../Hooks/UseRequestData";
+import { CircularProgress } from "@mui/material";
+import { DivCarregando } from "../LoginPage/Styled";
 
 
 export const LisTripsPage=()=>{
-
     const [listaViagens,isLoading] =useRequestData()
 
     const componentesLista=listaViagens.map((item, index)=>{
@@ -34,8 +35,11 @@ export const LisTripsPage=()=>{
     return(
         <DivHome> 
             {isLoading? 
-            <h3>Carregando...</h3> 
-            :
+            <DivCarregando>
+                <CircularProgress />
+                <CircularProgress />
+                <CircularProgress />
+            </DivCarregando>              :
             <>
                 <h1>Lista de Viagens</h1>
                 <DivCarrossel>

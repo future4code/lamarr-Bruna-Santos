@@ -1,22 +1,23 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import {useNavigate} from "react-router-dom"
 import { DivBotoesCriarViagem, DivCriarPaginas } from "./Styled";
 import { planetas } from '../../MockDeDados/Planetas'
 import { useProtectedPage } from "../../Hooks/useProtectedPage";
 import axios from 'axios'
 import { useForm } from "../../Hooks/UseForm";
-import { useRequestData } from "../../Hooks/UseRequestData";
+import { CircularProgress } from "@mui/material";
+import { DivCarregando } from "../LoginPage/Styled";
+
 
 
 export const CreateTripPage=()=>{
-    const [listaViagens, isLoading]=useRequestData()
-
+    const [isLoading, setIsLoading]=useState(false)
 
     useProtectedPage()
     const [formulario, onChange] = useForm({name: "", planet: "", date:"", description:"", durationInDays:""})
 
     const novaViagem=(event)=>{
-        console.log(formulario)
+        setIsLoading(true)
         event.preventDefault()
         const token = localStorage.getItem("token")
         const headers={
@@ -31,6 +32,7 @@ export const CreateTripPage=()=>{
         }).catch((error)=>{
             alert("Essa viagem não pode ser criada")
         }).finally(()=>{
+            setIsLoading(false)
         })
     }
 
@@ -45,7 +47,11 @@ export const CreateTripPage=()=>{
     return(
         <DivCriarPaginas>
             {isLoading?
-            <h1>Carregando....</h1>
+            <DivCarregando>
+                <CircularProgress />
+                <CircularProgress />
+                <CircularProgress />
+            </DivCarregando>    
             :
             <>
                 <h1>CRIAR VIAGENS</h1>

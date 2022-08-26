@@ -5,7 +5,10 @@ import { useProtectedPage } from "../../Hooks/useProtectedPage";
 import { useRequestData } from "../../Hooks/UseRequestData";
 import axios from "axios";
 import { BiTrash } from 'react-icons/bi'
-import { Modal } from "../Modal/Modal";
+import { Modal } from "./Modal/Modal"
+import { CircularProgress } from "@mui/material";
+import { DivCarregando } from "../LoginPage/Styled";
+
 
 export const AdminHomePage=()=>{
     useProtectedPage()
@@ -38,6 +41,7 @@ export const AdminHomePage=()=>{
             }
         }
     const deletarViagem=(id)=>{
+        console.log("Oies")
         const urlDelete=`https://us-central1-labenu-apis.cloudfunctions.net/labeX/Bruna-carvalho-lamarr/trips/${id}`
 
         axios.delete(urlDelete, headers)
@@ -59,7 +63,11 @@ export const AdminHomePage=()=>{
     return(
         <DivAdminHomePage>
             {isLoading?
-            <h1>Carregando...</h1>
+            <DivCarregando>
+                <CircularProgress />
+                <CircularProgress />
+                <CircularProgress />
+            </DivCarregando>            
             :
             <>
                 <h1>Painel administrativo</h1>

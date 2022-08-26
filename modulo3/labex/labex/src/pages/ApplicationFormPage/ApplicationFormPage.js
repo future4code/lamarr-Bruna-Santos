@@ -1,10 +1,13 @@
 import React, { useState } from "react";
 import { DivBotoesFormulario, DivFormulario } from "./Styled";
-import {useNavigate, useParams} from "react-router-dom"
+import {useNavigate} from "react-router-dom"
 import { useRequestData } from "../../Hooks/UseRequestData";
 import axios from "axios";
 import { paises } from '../../MockDeDados/Paises'
 import { useForm } from "../../Hooks/UseForm";
+import { DivCarregando } from "../LoginPage/Styled";
+import { CircularProgress } from "@mui/material";
+
 
 
 export const ApplicationFormPage=()=>{
@@ -38,8 +41,11 @@ export const ApplicationFormPage=()=>{
     return(
         <DivFormulario>
             {isLoading ? 
-            <h2>Carregando....</h2>
-            :
+            <DivCarregando>
+                <CircularProgress />
+                <CircularProgress />
+                <CircularProgress />
+            </DivCarregando>              :
             <>
                 <h1>Inscreva-se para uma viagem</h1>
                 <form onSubmit={formularioCandidato}>
