@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { DivAdminHomePage, DivBotoesHomePage, DivListaDeViagens} from "./Styled";
 import {useNavigate} from "react-router-dom"
 import { useProtectedPage } from "../../Hooks/useProtectedPage";
@@ -22,7 +22,6 @@ export function AdminHomePage(){
     }
     const [isModalVisible, setIsModalVisible]=useState(false)
 
-
     const componentesLista=listaViagens.map((item, index)=>{
         return(
             <DivListaDeViagens key={index} >
@@ -30,10 +29,8 @@ export function AdminHomePage(){
                 <button onClick={()=>{
                     setTripId(item.id)
                     setIsModalVisible(true)}}><BiTrash size="25px"/></button>
-
             </DivListaDeViagens>
         )
-
     })
     const token = localStorage.getItem("token")
     const headers ={
@@ -55,12 +52,17 @@ export function AdminHomePage(){
             draggable: true,
             progress: undefined,
             });
+            homePage()
         }).finally(()=>{
         })
     }
 
     const voltar=()=>{
         navigate(-1)
+    }
+
+    const homePage=()=>{
+        navigate(0)
     }
 
     const logout=()=>{
@@ -70,7 +72,6 @@ export function AdminHomePage(){
     const novaViagem=()=>{
         navigate("/admin/trips/create")
     }
-
 
     return(
         <DivAdminHomePage>
