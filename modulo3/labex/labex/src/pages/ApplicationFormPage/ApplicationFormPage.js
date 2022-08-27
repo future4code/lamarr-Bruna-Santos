@@ -34,6 +34,18 @@ export const ApplicationFormPage=()=>{
                 draggable: true,
                 progress: undefined,
                 }); 
+        }).catch((error)=>{
+            toast.error('Usuário não cadastrado, tente novamente', {
+                position: "top-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                });    
+        }).finally(()=>{
+            limpar()
         })
     }
 

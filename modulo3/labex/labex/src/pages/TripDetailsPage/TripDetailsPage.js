@@ -130,7 +130,6 @@ export const TripDetailsPage=()=>{
 
     /* useProtectedPage() */
 
-
     return(
         <DivListaDeViagens>
             {isLoading? 

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { DivAdminHomePage, DivBotoesHomePage, DivListaDeViagens} from "./Styled";
 import {useNavigate} from "react-router-dom"
 import { useProtectedPage } from "../../Hooks/useProtectedPage";
@@ -10,8 +10,9 @@ import { CircularProgress } from "@mui/material";
 import { DivCarregando } from "../LoginPage/Styled";
 import { toast } from "react-toastify";
 
-export const AdminHomePage=()=>{
+export function AdminHomePage(){
     useProtectedPage()
+    
     const [listaViagens,isLoading] =useRequestData()
     const [tripId, setTripId]=useState()
 
@@ -44,6 +45,7 @@ export const AdminHomePage=()=>{
     const deletarViagem=(id)=>{
         const urlDelete=`https://us-central1-labenu-apis.cloudfunctions.net/labeX/Bruna-carvalho-lamarr/trips/${id}`
         axios.delete(urlDelete, headers).then((response)=>{
+            setIsModalVisible()
             toast('🚫 Viagem deletada com sucesso!', {
             position: "top-right",
             autoClose: 5000,
@@ -53,6 +55,7 @@ export const AdminHomePage=()=>{
             draggable: true,
             progress: undefined,
             });
+        }).finally(()=>{
         })
     }
 
