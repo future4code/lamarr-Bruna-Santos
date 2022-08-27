@@ -45,29 +45,39 @@ export const CaixaModal=styled.div`
         border: none;
         background-color: transparent;
         color: blueviolet;
+        transition: .6s ease-in ;
         :hover{
             color: black;
+            -webkit-transform: scale(1.3);
+             transform: scale(1.3);
         }
 }
-    button:nth-child(3){
+    button:nth-child(4){
         color: red;
         background-color: #e39b9b;
         opacity: 1;
         border: 2px solid #e39b9b;
+        transition: .4s ease-in ;
         :hover{
             color: white;
             background-color: red;
+            -webkit-transform: scale(1.03);
+             transform: scale(1.03);
         }
     }
 
-    button:nth-child(4){
-        color: green;
-        background-color: #85dd80;
-        opacity: 1;
-        border: 2px solid #85dd80;
+    button:nth-child(3){
+        color: blueviolet;
+        background-color: lightgray; 
+        opacity: 0.8;
+        border: 2px solid lightgray;
+        transition: .4s ease-in ;
         :hover{
-            background-color: green;
-            color: white;
+            background-color: #bdbdbdeb;
+            color: blueviolet;
+            opacity: 1;
+            -webkit-transform: scale(1.03);
+            transform: scale(1.03);
         }
     }
 `
