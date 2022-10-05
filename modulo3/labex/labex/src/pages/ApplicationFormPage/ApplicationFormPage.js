@@ -18,7 +18,6 @@ export const ApplicationFormPage=()=>{
     const [listaViagens, isLoading]=useRequestData()
 
 
-
     const formularioCandidato=(event)=>{
         event.preventDefault()
         console.log(formulario)

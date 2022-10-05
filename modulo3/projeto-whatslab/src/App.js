@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import './App.css';
 import { Botoes, Button, Conversa, Div, DivEu, DivRemetente, Header, Input, InputMensagem, Main, Mensagens, MensagensRemetente, Remetente, Texto, TextoEu } from './Style';
 
 function App() {
@@ -28,7 +27,7 @@ function App() {
 
     const listaDeMensagem = conversas.map((elemento, index)=>{
       const deletarMensagem = () =>{
-        const novaMensagemEnviada = [... conversas]
+        const novaMensagemEnviada = [...conversas]
         const deletar = novaMensagemEnviada.findIndex((item)=>{
           return item === elemento
         })
