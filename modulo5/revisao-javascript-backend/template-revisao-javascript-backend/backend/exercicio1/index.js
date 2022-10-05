@@ -22,7 +22,8 @@ function temperatura (texto, num1, callback) {
         callback(`  ${num1}° Celsius é equivalente a ${(1.8 * num1)+32}° Farenheit`)
     }else if (texto !== "F" || texto !== "K"){
         callback(`Erro. Parâmentro ${texto} inválido`)
-    }
+    }/* else if (typeof(num1 === String)){
+        callback(`Erro. Parâmentro ${num1} inválido`)
+    } */
 }
-
-temperatura("A", 40, validacao)
+temperatura("K", "30", validacao)
