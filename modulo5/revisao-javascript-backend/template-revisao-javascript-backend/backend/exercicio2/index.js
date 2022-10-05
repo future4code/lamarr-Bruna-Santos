@@ -41,7 +41,25 @@ function cadastraClientesValidacao (cliente){
 }
 
 cadastraClientesValidacao({id: 11, nome:"Joelma"})
-console.log(clientes)
+/* console.log(clientes)
+ */
+// GERAR TABUADAS.
+
+function tabuada(numero){
+    if(numero >=1 && numero <= 10 ){
+        const resultado = []
+        for(let i = 0; i<=10; i++){
+            resultado.push(`${numero} x ${i} = ${numero * i}`)
+        }
+        return resultado
+    }else{
+        console.log("Insira um número de 1 a 10")
+    }
+    
+}
+console.log(tabuada(10))
+
+
 
 
 
