@@ -31,6 +31,14 @@ const posts:Post[] = [
 
   //B:
 
+  function buscarPostsPorAutor(posts:Post[], autorInformado:string) {
+    return posts.filter((post) => {
+        return post.autor === autorInformado
+      }
+    )
+  }
+
+  console.log(buscarPostsPorAutor(posts, "Hermione Granger"))
   //entradas: post e autor 
   //saidas: boolean (o post é realmente do autor informado?)
 

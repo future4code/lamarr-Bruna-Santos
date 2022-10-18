@@ -4,16 +4,8 @@ type produto ={
     classificacao:string
 }
 
-const cadastrarProduto: produto[] =[
-    {
-        nome:"Blusa",
-        preco:40,
-        classificacao:"inverno"
-    }
-]
-
-
 function procurarProduto(nome:string, preco:number, classificacao:string): number{
+
     if(classificacao === "verao"){
         return (preco - (preco * 5)/100)
     }else if (classificacao === "inverno"){
@@ -25,4 +17,8 @@ function procurarProduto(nome:string, preco:number, classificacao:string): numbe
     }
 }
 
+
+
 console.log(procurarProduto("Camiseta", 40, "banho"))
+
+//////////INCOMPLETO
