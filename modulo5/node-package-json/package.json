@@ -1,0 +1,16 @@
+{
+  "name": "aula-node",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./index.js",
+    "exercicio-1": "node ./exercicio1.js",
+    "exercicio-2": "node ./exercicio2.js",
+    "exercicio-3": "node ./exercicio3.js",
+    "exercicio-4": "node ./exercicio4.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
