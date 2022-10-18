@@ -27,6 +27,8 @@ const posts:Post[] = [
     }
   ]
 
+  console.table(posts)
+
   //B:
 
   //entradas: post e autor 
