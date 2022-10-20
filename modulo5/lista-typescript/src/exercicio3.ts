@@ -11,3 +11,4 @@ type filme ={
     ano:number, 
     genero:GENERO,
 }
+
