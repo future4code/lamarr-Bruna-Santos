@@ -11,7 +11,8 @@
     "exercicio4": "echo Transpilando... && tsc && echo Rodando... && node ./build/exercicio4.js",
     "exercicio5": "echo Transpilando... && tsc && echo Rodando... && node ./build/exercicio5.js",
     "exercicio6": "echo Transpilando... && tsc && echo Rodando... && node ./build/exercicio6.js",
-    "exercicio7": "echo Transpilando... && tsc && echo Rodando... && node ./build/exercicio7.js"
+    "exercicio7": "echo Transpilando... && tsc && echo Rodando... && node ./build/exercicio7.js",
+    "exercicio8": "echo Transpilando... && tsc && echo Rodando... && node ./build/exercicio8.js"
   },
   "keywords": [],
   "author": "",
