@@ -10,7 +10,7 @@ app.use(cors())
 app.get("/",(req:Request, res:Response)=>{
     const senha = req.headers.senha
     console.log(senha)
-    res.status(201).send('Tudo ok')
+    res.status(201).send('Hello from Express')
 })
 
 app.listen(3003, () => {
