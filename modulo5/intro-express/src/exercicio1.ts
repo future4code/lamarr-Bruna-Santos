@@ -8,8 +8,8 @@ app.use(express.json())
 app.use(cors())
 
 app.get("/",(req:Request, res:Response)=>{
-    const senha = req.headers.senha
-    console.log(senha)
+    const id = req.headers.id
+    console.log(id)
     res.status(201).send('Hello from Express')
 })
 
