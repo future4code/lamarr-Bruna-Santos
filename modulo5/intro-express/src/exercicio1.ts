@@ -16,3 +16,15 @@ app.get("/",(req:Request, res:Response)=>{
 app.listen(3003, () => {
     console.log("Servidor executando na porta 3003");
 })
+
+//exercicio 2:
+
+type Usuario ={
+    id:number
+    name:string
+    phone: number
+    email:string 
+    website:string
+}
+
+// exercicio 3:
