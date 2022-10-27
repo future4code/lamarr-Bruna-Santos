@@ -1,7 +1,7 @@
 //exercicio 2:
 
 type Usuario ={
-    id:number
+    id:number | undefined
     name:string
     phone: number
     email:string 

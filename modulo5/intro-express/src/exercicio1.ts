@@ -16,9 +16,6 @@ app.get("/",(req:Request, res:Response)=>{
     res.status(201).send('Hello from Express')
 })
 
-app.listen(3003, () => {
-    console.log("Servidor executando na porta 3003");
-})
 
 // exercicio 4:
 app.get("/usuarios", (req:Request, res:Response)=> {
@@ -38,15 +35,18 @@ app.get("/posts", (req:Request, res:Response)=> {
 
 // exercicio 8:
 app.get("/posts/usuario",(req:Request, res:Response)=>{
-    const idUsuario = req.headers.idUser
+    const usuarioId = req.headers.iduser
+    const postagemId = req.query.id
 
-    if(!idUsuario){
+    if(!usuarioId && !postagemId){
         res.status(400).send("Colocar um id válido")
     }
 
-    const procurarUsuario = posts.find((user)=>{
-        return user.id === idUsuario
+    const usuarioFiltrado = posts.filter((user)=>{
+        return user.id === usuarioId
     })
+})
 
-    return res.status(200).send(procurarUsuario)
+app.listen(3003, () => {
+    console.log("Servidor executando na porta 3003");
 })
