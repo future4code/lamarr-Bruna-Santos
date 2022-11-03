@@ -60,8 +60,10 @@ app.put("/editar/:id", (req: Request, res:Response)=>{
     const id = req.params.id
     const {price}=req.body
 
-    if(!id || !price){
-        return res.status(401).send("Passe todo os parametros corretamente")
+    if(!id && !price){
+        return res.status(400).send("Passe todo os parametros corretamente")
+    }else if (!price){
+        return res.status(400).send("Insira o novo preço")
     }
 
     const alterarProduto = mercado.find((produto)=>{
