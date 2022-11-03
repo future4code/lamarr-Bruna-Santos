@@ -1,8 +1,4 @@
-type Mercado={
-    id:string
-    name: string
-    price: number
-}
+import { Mercado } from "./type";
 
 export const mercado:Mercado[] = [
     {
