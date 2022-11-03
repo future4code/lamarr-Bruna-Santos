@@ -4,7 +4,7 @@ type produto ={
     classificacao:string
 }
 
-function procurarProduto(produtos:produto[]) :any{
+function procurarProduto(produtos:produto[]) :produto[]{
     return produtos.map((item:produto)=>{
         if(item.classificacao === "verao"){
             return {
