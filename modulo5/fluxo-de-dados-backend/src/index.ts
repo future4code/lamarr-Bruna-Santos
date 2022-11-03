@@ -22,13 +22,26 @@ app.post("/new_produto", (req: Request, res: Response)=>{
     let novoProduto ={
         id, name, price
     }
+    
+    if (!id && !name && !price){
+        return res.status(400).send("Insira todos os parametros necessário")
 
-    if(!id || !name || !price){
-        return res.status(400).send("Passe todos os parametros necessários")
-    }
+    }else if (!id ){
+        return res.status(400).send("Insira o id do produto")
+    }else if(!name ){
+        return res.status(400).send("Insira o nome do produto")
+/*     }else if(name === Number){
+        return res.status(400).send("O nome do produto deve ser composto apenas por letras.") */
+    }else if(!price){
+        return res.status(400).send("Insira o preço do produto")
+/*     }else if(price === String){
+        return res.status(400).send("O preço deve ser composto apenas por números") */
+    }/* else if(price === 0 ){
+        return res.status(400).send("Insira um preço maior do que 0.00")
+    } */
 
-    mercado.push(novoProduto)
     console.log("Produto adicionado com sucesso")
+    mercado.push(novoProduto)
     res.status(201).send(mercado)
 })
 
