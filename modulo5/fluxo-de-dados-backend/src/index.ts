@@ -31,6 +31,15 @@ app.post("/new_produto", (req: Request, res: Response)=>{
     res.status(200).send(mercado)
 })
 
+// exercicio 5:
+
+app.get("/produtos", (req: Request, res:Response)=>{
+    mercado.map((item)=>{
+        return item
+    })
+    res.status(200).send(mercado)
+})
+
 ///////// listen:
 
 app.listen(3003, () => {
