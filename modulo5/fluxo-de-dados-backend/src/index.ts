@@ -28,6 +28,7 @@ app.post("/new_produto", (req: Request, res: Response)=>{
     }
 
     mercado.push(novoProduto)
+    console.log("Produto adicionado com sucesso")
     res.status(201).send(mercado)
 })
 
@@ -68,6 +69,7 @@ app.put("/editar/:id", (req: Request, res:Response)=>{
             price
         }
     }
+    console.log("Produto editado com sucesso")
     res.status(200).send(mercado)
 })
 
