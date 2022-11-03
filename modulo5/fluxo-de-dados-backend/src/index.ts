@@ -40,6 +40,37 @@ app.get("/produtos", (req: Request, res:Response)=>{
     res.status(200).send(mercado)
 })
 
+// exercicio 6: Editar o preço.
+
+app.put("/editar/:id", (req: Request, res:Response)=>{
+    const id = req.params.id
+    const {price}=req.body
+
+    if(!id || !price){
+        return res.status(400).send("Passe todo os parametros corretamente")
+    }
+
+    const alterarProduto = mercado.find((produto)=>{
+        return produto.id === id
+    })
+
+    if(!alterarProduto){
+        return res.status(404).send("Produto não encontrado")
+    }else{
+        //pegar o indice do produto
+        const indice = mercado.findIndex((produto)=>{
+            return produto.id === id
+        })
+
+        // fazendo o spreed para manter as informações q não foram alteradas
+        mercado[indice] ={
+            ...alterarProduto, 
+            price
+        }
+    }
+    res.status(200).send(mercado)
+})
+
 ///////// listen:
 
 app.listen(3003, () => {
