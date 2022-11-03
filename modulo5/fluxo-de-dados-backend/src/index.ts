@@ -28,7 +28,7 @@ app.post("/new_produto", (req: Request, res: Response)=>{
     }
 
     mercado.push(novoProduto)
-    res.status(200).send(mercado)
+    res.status(201).send(mercado)
 })
 
 // exercicio 5:
@@ -47,7 +47,7 @@ app.put("/editar/:id", (req: Request, res:Response)=>{
     const {price}=req.body
 
     if(!id || !price){
-        return res.status(400).send("Passe todo os parametros corretamente")
+        return res.status(401).send("Passe todo os parametros corretamente")
     }
 
     const alterarProduto = mercado.find((produto)=>{
@@ -70,6 +70,35 @@ app.put("/editar/:id", (req: Request, res:Response)=>{
     }
     res.status(200).send(mercado)
 })
+
+//exercicio 7:
+
+app.delete("/deletar/:id", (req:Request, res: Response)=>{
+    const id = req.params.id
+
+    if(!id){
+        return res.send(400).send("Informe o id do produto!")
+    }
+
+    const deletarProduto = mercado.find((produto)=>{
+        return produto.id === id
+    })
+
+    if(!deletarProduto){
+        return res.send(404).send("Produto não encontrado")
+    }
+
+    const indice = mercado.findIndex((produto)=>{
+        return produto.id === id
+    })
+
+    mercado.splice(indice,1)
+    console.log("Produto deletado com sucesso")
+    res.status(200).send(mercado)
+    
+})
+
+
 
 ///////// listen:
 
