@@ -64,6 +64,8 @@ app.put("/editar/:id", (req: Request, res:Response)=>{
         return res.status(422).send("Passe todo os parametros corretamente")
     }else if (!price){
         return res.status(422).send("Insira o novo preço")
+    }else if (typeof(price) !== "number"){
+        return res.status(400).send("O preço deve ser composto apenas por números")
     }
 
     const alterarProduto = mercado.find((produto)=>{
