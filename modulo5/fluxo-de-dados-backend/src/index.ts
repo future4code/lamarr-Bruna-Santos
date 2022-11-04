@@ -24,22 +24,22 @@ app.post("/new_produto", (req: Request, res: Response)=>{
     }
     
     if (!id && !name && !price){
-        return res.status(400).send("Insira todos os parametros necessário")
+        return res.status(422).send("Insira todos os parametros necessário")
 
     }else if (!id ){
-        return res.status(400).send("Insira o id do produto")
+        return res.status(422).send("Insira o id do produto")
     }else if(!name ){
-        return res.status(400).send("Insira o nome do produto")
-/*     }else if(name === Number){
-        return res.status(400).send("O nome do produto deve ser composto apenas por letras.") */
+        return res.status(422).send("Insira o nome do produto")
+    }else if(typeof(name) === "number"){
+        return res.status(400).send("O nome do produto deve ser composto apenas por letras.")
     }else if(!price){
-        return res.status(400).send("Insira o preço do produto")
-/*     }else if(price === String){
-        return res.status(400).send("O preço deve ser composto apenas por números") */
-    }/* else if(price === 0 ){
+        return res.status(422).send("Insira o preço do produto")
+    }else if(typeof(price) === "string"){
+        return res.status(400).send("O preço deve ser composto apenas por números")
+    }else if(price === 0.0 ){
         return res.status(400).send("Insira um preço maior do que 0.00")
-    } */
-
+    }
+    console.log(typeof(name))
     console.log("Produto adicionado com sucesso")
     mercado.push(novoProduto)
     res.status(201).send(mercado)
@@ -61,9 +61,9 @@ app.put("/editar/:id", (req: Request, res:Response)=>{
     const {price}=req.body
 
     if(!id && !price){
-        return res.status(400).send("Passe todo os parametros corretamente")
+        return res.status(422).send("Passe todo os parametros corretamente")
     }else if (!price){
-        return res.status(400).send("Insira o novo preço")
+        return res.status(422).send("Insira o novo preço")
     }
 
     const alterarProduto = mercado.find((produto)=>{
@@ -94,7 +94,7 @@ app.delete("/deletar/:id", (req:Request, res: Response)=>{
     const id = req.params.id
 
     if(!id){
-        return res.send(400).send("Informe o id do produto!")
+        return res.send(422).send("Informe o id do produto!")
     }
 
     const deletarProduto = mercado.find((produto)=>{
