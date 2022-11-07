@@ -1,6 +1,6 @@
 import { TYPE, Usuario } from "./types";
 
-let users:Usuario[] = [
+export let users:Usuario[] = [
     {
         id: 1,
         name: "Alice",
