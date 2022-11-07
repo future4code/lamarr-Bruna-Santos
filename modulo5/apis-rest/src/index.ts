@@ -4,7 +4,7 @@ import cors from 'cors'
 import { updateLanguageServiceSourceFile } from "typescript"
 import { users } from "./dados"
 import { type } from "os"
-import { TYPE } from "./types"
+import { TYPE, Usuario } from "./types"
 
 const app = express()
 
@@ -65,6 +65,9 @@ app.get("/types", (req: Request, res: Response)=>{
 })
 
 // b: Através do enum!
+
+// 3:
+
 app.get("/user", (req: Request, res: Response)=>{
     let errorCode = 400
 
@@ -91,4 +94,35 @@ app.get("/user", (req: Request, res: Response)=>{
     }
 })
 
-// 3:
+app.put("/novo/usuario", (req: Request, res: Response)=>{
+    let errorCode = 400
+
+    try{
+        const {name, email, type, age} = req.body
+
+        if(!name || !email || !type || !age){
+            errorCode = 422
+            throw new Error("Favor inserir todos os parametros necessário: Nome, email, tipo e idade");
+        }
+
+        if(type !== "ADMIN" && type !== "NORMAL"){
+            errorCode = 402
+            throw new Error("Insira um tipo de usuário válido: ADMIN ou NORMAL");
+        }
+
+        const novoUsuario: Usuario ={
+            id: Math.random(),
+            name,
+            email,
+            type,
+            age
+        }
+
+        users.push(novoUsuario)
+        res.status(200).send(users)
+    }catch(error: any){
+        res.status(errorCode).send(error.message)
+    }
+})
+
+//b: Não, pois o put seria para realizar alguma alteração, como estou criando um novo usuário o correto seria utilizar o Post.
