@@ -3,6 +3,8 @@ import express, {Request, Response} from "express"
 import cors from 'cors'
 import { updateLanguageServiceSourceFile } from "typescript"
 import { users } from "./dados"
+import { type } from "os"
+import { TYPE } from "./types"
 
 const app = express()
 
@@ -33,3 +35,34 @@ app.get("/users",(req: Request, res: Response)=>{
 app.listen(3002, () => {
     console.log("Server is running in http://localhost:3002");
 });
+
+// Exercicio 2:
+// a:
+app.get("/types", (req: Request, res: Response)=>{
+    let errorCode = 400
+
+    try{
+        const userType = req.query.type as string
+
+        if(!userType){
+            errorCode = 422
+            throw new Error("Favor inserir o tipo que deseja filtrar");
+        }
+
+        const usuarioFiltrado = users.filter((tipo)=>{
+            return tipo.type.toLowerCase() === userType.toLowerCase()
+        })
+
+        if(!usuarioFiltrado){
+            errorCode = 404
+            throw new Error("Não encontramos nenhum usuário com esse tipo");
+            
+        }
+        res.status(200).send(usuarioFiltrado)
+    }catch(error:any){
+        res.status(errorCode).send(error.message)
+    }
+})
+
+
+// b: Através do enum!
