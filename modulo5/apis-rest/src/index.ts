@@ -37,7 +37,7 @@ app.listen(3002, () => {
 });
 
 // Exercicio 2:
-// a:
+// a: Passei via query
 app.get("/types", (req: Request, res: Response)=>{
     let errorCode = 400
 
@@ -64,5 +64,31 @@ app.get("/types", (req: Request, res: Response)=>{
     }
 })
 
-
 // b: Através do enum!
+app.get("/user", (req: Request, res: Response)=>{
+    let errorCode = 400
+
+    try{
+        const userName = req.query.name as string
+
+        if(!userName){
+            errorCode = 422
+            throw new Error("Favor inserir o nome de um usuário");
+        }
+
+        const usuarioFiltrado = users.find((user)=>{
+            return user.name.toLowerCase() === userName.toLowerCase()
+        })
+
+        if(!usuarioFiltrado){
+            errorCode = 404
+            throw new Error("Não encontramos nenhum usuário com esse nome");
+            
+        }
+        res.status(200).send(usuarioFiltrado)
+    }catch(error:any){
+        res.status(errorCode).send(error.message)
+    }
+})
+
+// 3:
