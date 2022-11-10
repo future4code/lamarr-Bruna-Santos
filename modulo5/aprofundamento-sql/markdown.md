@@ -51,5 +51,21 @@ E) SELECT AVG (salary) FROM Actor GROUP BY gender;
 
 --- Exercicio 6:
 
+A) ALTER TABLE Movies ADD playing_limit_date varchar(255);
+
+B)ALTER TABLE Movies CHANGE avaliacao avaliacao float;
+
+C)
+EM CARTAZ: UPDATE Movies SET playing_limit_date = "2022/12/31" WHERE id = "001";
+
+SAIU DO CARTAZ: UPDATE Movies SET playing_limit_date = "2022/10/20" WHERE id = "002";
+
+
+D) DELETE FROM Movies WHERE id = "003";
+UPDATE Movies SET sinopse = "testando sinopse" WHERE id = "003";
+
+Ele informa apenas que nenhuma coluna foi afetada.
+
+
 
 
