@@ -78,7 +78,7 @@ f) SELECT MIN(avaliacao) from Movies;
 A) SELECT * from Movies ORDER BY name ASC;
 B) SELECT * from Movies ORDER BY name DESC LIMIT 5;
 c) SELECT * from Movies WHERE release_date < CURDATE() ORDER BY playing_limit_date DESC Limit 3;
-D) SELECT * from Movies ORDER BY avaliacao DESC LIMIT 3;
+D) SELECT * from Movies ORDER BY avaliacao DESC LIMIT 3
 
 
 
