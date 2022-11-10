@@ -66,6 +66,22 @@ UPDATE Movies SET sinopse = "testando sinopse" WHERE id = "003";
 
 Ele informa apenas que nenhuma coluna foi afetada.
 
+--- Exercicio 7:
+a)SELECT COUNT(*) from Movies Where avaliacao > 7.5;
+b)SELECT avg(avaliacao) from Movies;
+c) SELECT COUNT(*) from Movies Where playing_limit_date >= CURDATE();
+d) SELECT COUNT(*) FROM Movie WHERE release_date > CURDATE();
+e) SELECT MAX(avaliacao) from Movies;
+f) SELECT MIN(avaliacao) from Movies;
+
+---- EXERCICIO 8:
+A) SELECT * from Movies ORDER BY name ASC;
+B) SELECT * from Movies ORDER BY name DESC LIMIT 5;
+c) SELECT * from Movies WHERE release_date < CURDATE() ORDER BY playing_limit_date DESC Limit 3;
+D) SELECT * from Movies ORDER BY avaliacao DESC LIMIT 3;
+
+
+
 
 
 
