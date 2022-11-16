@@ -58,7 +58,6 @@ d) DELETE FROM Actor WHERE id = "007";
 Não é possivel excluir ou atualizar pois há uma retrição de chave estrangeira.
 
 
-
 ------ EXERCICIO 3:
 
 a) O ON significa que ele vai buscar apenas o que tiver presente nas duas tabelas.
