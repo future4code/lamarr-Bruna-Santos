@@ -29,11 +29,29 @@ export const getAllUsers =async (req:Request, res: Response):Promise<void> => {
             order = "asc"
         }
 
+        // paginação:
+        let size = Number(req.query.size)
+        let page = Number(req.query.page)
+
+        // caso o usuário não informe o size e a page, o padrão será iniciar
+        // na primeira pagina, e informar 5 resultados por página.
+        if(isNaN(size) || size < 1){
+            size = 5
+        }
+
+        if(isNaN(page) || size < 1){
+            page = 1
+        }
+
+        let offset = size * (page -1)
+
 
         // constante para os resultados:
         const resultado = await connection("aula48_exercicio")
         .where("name", "like", `%${name}%`)
         .orderBy(sort, order)
+        .limit(size)
+        .offset(offset)
         
         
 
