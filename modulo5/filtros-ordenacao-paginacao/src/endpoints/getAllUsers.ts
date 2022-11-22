@@ -20,8 +20,11 @@ export const getAllUsers =async (req:Request, res: Response):Promise<void> => {
         let order = req.query.order as string
 
         // caso não passe nenhum parametro na ordenação, ele automaticamente irá
-        // ordenar em ordem crescente.
-        
+        // ordenar pelo e-mail(sort) em ordem crescente(order)
+
+        if(!sort){
+            sort = "email"
+        }
         if (!order){
             order = "asc"
         }
