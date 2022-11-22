@@ -14,9 +14,25 @@ export const getAllUsers =async (req:Request, res: Response):Promise<void> => {
             name = "%"
         }
 
+        // ordenação por nome ou tipo:
+        let sort = req.query.sort as string
+
+        let order = req.query.order as string
+
+        // caso não passe nenhum parametro na ordenação, ele automaticamente irá
+        // ordenar em ordem crescente.
+        
+        if (!order){
+            order = "asc"
+        }
+
+
         // constante para os resultados:
         const resultado = await connection("aula48_exercicio")
         .where("name", "like", `%${name}%`)
+        .orderBy(sort, order)
+        
+        
 
 
         //caso não encontre o usuário:
