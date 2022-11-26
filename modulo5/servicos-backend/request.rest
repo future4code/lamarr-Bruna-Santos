@@ -1,0 +1,12 @@
+GET https://viacep.com.br/ws/81825150/json/
+Content-Type: application/json
+
+###
+
+
+POST http://localhost:3004/address
+Content-Type: application/json
+
+{
+    "cep": "81825150"
+}
