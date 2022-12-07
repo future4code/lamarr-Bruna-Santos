@@ -18,8 +18,8 @@ POST http://localhost:3003/products
 Content-Type: application/json
 
 {
-    "name": "Cadeira gamer",
-    "price": 3000
+    "name": "Led",
+    "price": 200
 }
 
 ### Exercício 4 - Get products
