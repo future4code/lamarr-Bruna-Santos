@@ -1,12 +1,12 @@
 export class Users{
+    private id: string
     private email: string;
     private password: string;
-    private id: string
 
-    constructor(email:string, password:string, id:string){
+    constructor(id:string, email:string, password:string){
+        this.id = id;
         this.email = email;
         this.password = password;
-        this.id = id;
    }
 
     public getEmail():string{
@@ -26,11 +26,11 @@ export class Users{
     }
 
     public getId():string{
-        return this.password
+        return this.id
     }
 
-    public setId(newPassword:string):void{
-        this.password = newPassword
+    public setId(newId:string):void{
+        this.id = newId
     }
 
 }
