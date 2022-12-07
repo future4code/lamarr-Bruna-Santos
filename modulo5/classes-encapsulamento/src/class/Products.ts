@@ -3,18 +3,18 @@ export class Products{
     private price: number;
     private id: string
 
-    constructor(name:string, price:number, id:string){
+    constructor(id:string, name:string, price:number){
+        this.id = id;
         this.name = name;
         this.price = price;
-        this.id = id;
    }
 
-    public getname():string{
+    public getName():string{
         return this.name;
     }
 
-    public setName(newname:string):void{
-        this.name = newname;
+    public setName(newName:string):void{
+        this.name = newName;
     }
 
     public getPrice():number{
@@ -29,8 +29,8 @@ export class Products{
         return this.id
     }
 
-    public setId(newPassword:string):void{
-        this.id = newPassword
+    public setId(newId:string):void{
+        this.id = newId
     }
 
 }
