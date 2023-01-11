@@ -1,0 +1,34 @@
+GET http://localhost:3003/ping
+
+### Create a new client
+POST http://localhost:3003/client
+Content-Type: application/json
+
+{
+    "name": "Bruna"
+}
+
+### Listar clientes:
+GET http://localhost:3003/client
+
+
+### Listar produtos:
+GET http://localhost:3003/products
+
+### Criar pedido:
+POST http://localhost:3003/order
+Content-Type: application/json
+
+{
+    "fk_client": 1,
+    "delivery_date":"2023-01-04",
+    "products":[
+        {
+            "id":1,
+            "qty":200
+        }
+    ]
+}
+
+### Estoque:
+GET http://localhost:3003/stock
