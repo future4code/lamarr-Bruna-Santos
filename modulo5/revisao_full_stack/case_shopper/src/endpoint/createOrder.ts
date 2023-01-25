@@ -10,8 +10,6 @@ export const createOrder=async (req:Request, res:Response)=>{
         const fk_client = req.body.fk_client;
         const products:TProducts[] = req.body.products
 
-/*         const qty = req.body.qty;
-        const fk_product = req.body.fk_product; */
         
         if(!delivery_date || !fk_client || !products){
             throw new Error("Insira todos os dados solicitados: Data de entrega, Fk Client e Produtos")
