@@ -5,4 +5,5 @@ const userController = new UserController()
 
 app.post("/createUser", userController.createUser)
 app.get("/createUser", userController.findUser)
+app.delete("/:id", userController.deleteUser)
 
