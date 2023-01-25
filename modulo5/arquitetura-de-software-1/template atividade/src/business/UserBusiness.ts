@@ -1,4 +1,6 @@
+import { Request, Response } from "express";
 import { UserDatabase } from "../data/UserDatabase";
+import { user } from "../types/user";
 
 export class UserBusiness {
     createUser = async (input:any): Promise<void>=>{
@@ -27,6 +29,11 @@ export class UserBusiness {
             throw new Error(error.message);
         }
     };
+
+    async get(): Promise<user[]>{
+
+        return await new UserDatabase().get();
+    }
 
     findUser = () => {};
     deleteUser = () => {};
