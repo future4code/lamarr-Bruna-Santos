@@ -9,3 +9,14 @@ Content-Type: application/json
 
 ###
 GET http://localhost:3003/user
+
+###
+POST http://localhost:3003/movie/create
+Content-Type: application/json
+
+{
+    "title": "Efeito borboleta",
+    "description": "Evan pode viajar de volta no tempo para momentos de dificuldades na infância. Ele também pode alterar o passado para os amigos.",
+    "duration_in_minutes": 180,
+    "year_of_release": 2004
+}
