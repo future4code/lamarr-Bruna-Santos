@@ -1,17 +1,18 @@
 import { MovieDatabase } from '../data/movieDatabase'
+import { DescriptionInvalid, DurationInvalid, TitleInvalid, YearInvalid } from '../error/MovieError'
 import { InsertMovieInputDTO, MovieInputDTO } from '../model/MovieDTOS'
 import { generateId } from '../services/idGenerator'
 
 export class MovieBusiness{
     async createMovie({title, description, duration_in_minutes, year_of_release}: MovieInputDTO):Promise<void>{
         if(!title){
-            throw new Error("Insira o título do filme")
+            throw new TitleInvalid()
         }else if(!description){
-            throw new Error("Insira a descrição do filme")
+            throw new DescriptionInvalid()
         }else if(!duration_in_minutes){
-            throw new Error("Insira a duração em minutos do filme")
+            throw new DurationInvalid()
         }else if(!year_of_release){
-            throw new Error("Insira o ano de lançamento do filme")
+            throw new YearInvalid()
         }
 
         const id = generateId()
