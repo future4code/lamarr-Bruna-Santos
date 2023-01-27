@@ -1,0 +1,22 @@
+POST http://localhost:3003/user/create
+Content-Type: application/json
+
+{
+    "name": "Seu jorge",
+    "email": "seujorge@email.com",
+    "password": "burguesinha"
+}
+
+###
+GET http://localhost:3003/user
+
+###
+POST http://localhost:3003/movie/create
+Content-Type: application/json
+
+{
+    "title": "Escritores da liberdade",
+    "description": "Uma jovem e idealista professora chega a uma escola de um bairro pobre, que está corrompida pela agressividade e violência.",
+    "duration_in_minutes": 210,
+    "year_of_release": 2007
+}
