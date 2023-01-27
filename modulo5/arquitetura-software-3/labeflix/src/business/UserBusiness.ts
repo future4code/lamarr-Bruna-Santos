@@ -1,6 +1,6 @@
 import { UserDatabase } from "../data/UserDatabase"
-import { v4 as generateId } from 'uuid'
 import { InsertUsersInputDTO, UsersInputDTO } from "../model/UserDTOS"
+import { generateId } from "../services/idGenerator"
 
 export class UserBusiness {
   async create({ email, name, password }: UsersInputDTO):Promise<void> {

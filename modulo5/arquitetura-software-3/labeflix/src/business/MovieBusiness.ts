@@ -1,6 +1,6 @@
-import { v4 as generateId } from 'uuid'
 import { MovieDatabase } from '../data/movieDatabase'
 import { InsertMovieInputDTO, MovieInputDTO } from '../model/MovieDTOS'
+import { generateId } from '../services/idGenerator'
 
 export class MovieBusiness{
     async createMovie({title, description, duration_in_minutes, year_of_release}: MovieInputDTO):Promise<void>{
@@ -15,7 +15,6 @@ export class MovieBusiness{
         }
 
         const id = generateId()
-
         const movieDatabase = new MovieDatabase()
 
         const movieInput: InsertMovieInputDTO ={
